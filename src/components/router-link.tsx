@@ -3,9 +3,10 @@ import { useHistory } from "react-router-dom";
 
 interface IHyperLinkProps {
   to: string;
+  tooltip?: string;
 }
 
-const RouterLink: React.FC<IHyperLinkProps> = ({ to, children }) => {
+const RouterLink: React.FC<IHyperLinkProps> = ({ to, tooltip, children }) => {
   const history = useHistory();
   return (
     <div
@@ -14,6 +15,7 @@ const RouterLink: React.FC<IHyperLinkProps> = ({ to, children }) => {
       }}
     >
       {children}
+      {tooltip && <div className="tooltip">{tooltip}</div>}
     </div>
   );
 };
