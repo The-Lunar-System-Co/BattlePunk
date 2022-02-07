@@ -2,7 +2,6 @@ import React from "react";
 
 // components
 import Header from "../components/header";
-import HyperLink from "../components/hyper-link";
 
 // images
 import MintPageBackground from "../assets/images/ming-page-bg.webp";
