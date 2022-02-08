@@ -99,7 +99,7 @@
 
     &__contents {
       position: relative;
-      padding: 15% 13%;
+      padding: 15% 12.5%;
       &__content-1 {
         position: relative;
         img {
@@ -237,6 +237,7 @@
 
         &::-webkit-scrollbar {
           width: 6px;
+          margin: 2px;
         }
 
         &::-webkit-scrollbar-track {
