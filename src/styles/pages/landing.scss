@@ -178,31 +178,6 @@
         img {
           width: 100%;
         }
-        &__container {
-          position: absolute;
-          top: 25%;
-          left: 45%;
-          right: 20%;
-          bottom: 30%;
-          overflow-y: scroll;
-
-          &::-webkit-scrollbar {
-            width: 3px;
-          }
-
-          &::-webkit-scrollbar-track {
-            background: #cccccc; /* color of the tracking area */
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background-color: white; /* color of the scroll thumb */
-            border-radius: 20px; /* roundness of the scroll thumb */
-          }
-
-          img {
-            width: 100%;
-          }
-        }
       }
 
       &__content-5 {
@@ -246,6 +221,32 @@
         bottom: 0%;
         right: 0%;
         pointer-events: none;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &__scroll {
+        position: absolute;
+        top: 39%;
+        left: 45%;
+        right: 30%;
+        bottom: 55%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #cccccc; /* color of the tracking area */
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: white; /* color of the scroll thumb */
+          border-radius: 20px; /* roundness of the scroll thumb */
+        }
 
         img {
           width: 100%;

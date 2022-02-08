@@ -90,9 +90,6 @@ const Landing: React.FC = () => {
           </div>
           <div className="page-landing__body__contents__content-3">
             <img src={Content3} alt="content-1" />
-            <div className="page-landing__body__contents__content-3__container">
-              <img src={Scroll} alt="scroll" />
-            </div>
           </div>
           <video
             className="page-landing__body__contents__content-4"
@@ -126,6 +123,9 @@ const Landing: React.FC = () => {
           <div className="page-landing__body__contents__border">
             <img src={BodyBorder} alt="content-1" />
           </div>
+          <div className="page-landing__body__contents__scroll">
+              <img src={Scroll} alt="scroll" />
+            </div>
         </div>
       </div>
       <div className="page-landing__footer">
