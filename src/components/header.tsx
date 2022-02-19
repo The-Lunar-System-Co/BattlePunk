@@ -42,16 +42,46 @@ const Header = () => {
         className="component-header__mobile-nav"
         style={{ maxHeight: isMobileDropDownOpen ? "100vh" : "0px" }}
       >
-        <div className="component-header__mobile-nav__item">Home</div>
-        <div className="component-header__mobile-nav__item">Mint</div>
-        <div className="component-header__mobile-nav__item">PunkyDex</div>
-        <div className="component-header__mobile-nav__item">ArenaMarket</div>
-        <div className="component-header__mobile-nav__item">Play</div>
-        <div className="component-header__mobile-nav__item">$LSD</div>
-        <div className="component-header__mobile-nav__item">Punkon</div>
-        <div className="component-header__mobile-nav__item">BattlePaper</div>
-        <div className="component-header__mobile-nav__item">Faq</div>
-        <div className="component-header__mobile-nav__item">Partners</div>
+        <div className="component-header__mobile-nav__item">
+          <div>Home</div>
+          <div></div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>Mint</div>
+          <div></div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>PunkyDex</div>
+          <div>Coming Soon</div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>ArenaMarket</div>
+          <div>Coming Soon</div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>Play</div>
+          <div>Coming Soon</div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>$LSD</div>
+          <div></div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>Punkon</div>
+          <div>Coming Soon</div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>BattlePaper</div>
+          <div></div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>Faq</div>
+          <div>Coming Soon</div>
+        </div>
+        <div className="component-header__mobile-nav__item">
+          <div>Partners</div>
+          <div>Coming Soon</div>
+        </div>
       </div>
       <div
         className={[
