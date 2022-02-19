@@ -1,4 +1,5 @@
 import React from "react";
+import { Modal } from "react-responsive-modal";
 
 // components
 import Header from "../components/header";
@@ -8,14 +9,24 @@ import MintPageBackground from "../assets/images/ming-page-bg.webp";
 import MintPageHeaderBackground from "../assets/images/mint-page-header.webp";
 
 const Mint = () => {
+  const [open, setOpen] = React.useState(true);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
   return (
     <div className="page-mint">
       <Header />
       <div className="page-mint__container">
+        {/* <Modal open={open} onClose={onCloseModal} center>
+          <h2>Simple centered modal</h2>
+        </Modal> */}
         <img
           className="page-mint__container__bg"
           src={MintPageBackground}
           alt="page-mint-bg"
+          onClick={() => {
+            onOpenModal();
+          }}
         />
         <div className="page-mint__container__footer-left">
           <div>PREVIOUSE SALE</div>
