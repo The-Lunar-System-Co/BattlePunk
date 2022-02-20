@@ -2,19 +2,28 @@ import React from "react";
 
 interface IModalProps {
   isOpen: boolean;
-  openModalHandler: () => {};
-  closeModalHandler: () => {};
+  closeModalHandler: () => void;
 }
 
 const Modal: React.FC<IModalProps> = ({
   isOpen,
-  openModalHandler,
   closeModalHandler,
   children
 }) => {
   return (
-    <div className="component-modal">
+    <div
+      className="component-modal"
+      style={{
+        bottom: isOpen ? "0vh" : "100vh",
+        opacity: isOpen ? 100 : 0,
+        backgroundColor: isOpen ? "#000000cc" : "transparent"
+      }}
+    >
       <div className="component-modal__modal">{children}</div>
+      <div
+        className="component-modal__close-btn"
+        onClick={closeModalHandler}
+      ></div>
     </div>
   );
 };

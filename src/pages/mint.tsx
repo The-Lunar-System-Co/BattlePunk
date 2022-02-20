@@ -2,27 +2,90 @@ import React from "react";
 
 // components
 import Header from "../components/header";
+import Modal from "../components/modal";
 
 // images
 import MintPageBackground from "../assets/images/ming-page-bg.webp";
 import MintPageHeaderBackground from "../assets/images/mint-page-header.webp";
+import MetamaskImage from "../assets/images/metamask.svg";
+import WalletConnectImage from "../assets/images/walletconnect.svg";
+
+import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
+import { InjectedConnector } from "@web3-react/injected-connector";
+// import { formatEther, parseEther } from "@ethersproject/units";
+// import { Contract } from "@ethersproject/contracts";
 
 const Mint = () => {
-  const [isWalletModalOpen, setIsWalletModalOpen] = React.useState(true);
+  const context = useWeb3React();
+  const {
+    // library,
+    // chainId,
+    account,
+    activate,
+    deactivate,
+    active,
+    error
+  } = context;
+
+  const [isWalletModalOpen, setIsWalletModalOpen] = React.useState(false);
 
   const openWalletModalHandler = () => setIsWalletModalOpen(true);
-  // const closeWalletModalHandler = () => setIsWalletModalOpen(false);
+  const closeWalletModalHandler = () => setIsWalletModalOpen(false);
+
+  const connectMetamask = () => {
+    const injected = new InjectedConnector({
+      supportedChainIds: [1, 3, 4]
+    });
+    try {
+      activate(injected);
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
+  const disconnect = () => {
+    try {
+      deactivate();
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
   return (
     <div className="page-mint">
       <Header />
-      <div className="page-mint__container">
-        {isWalletModalOpen && (
+      <Modal
+        isOpen={isWalletModalOpen}
+        closeModalHandler={closeWalletModalHandler}
+      >
+        <div className="component-modal__modal__item" onClick={() => {
+          connectMetamask();
+          closeWalletModalHandler();
+        }}>
           <img
-            className="page-mint__container__bg"
-            src={MintPageBackground}
-            alt="page-mint-bg"
+            className="component-modal__modal__item__img"
+            src={MetamaskImage}
+            alt="metamask"
           />
-        )}
+          <div className="component-modal__modal__item__text">Metamask</div>
+        </div>
+        <div className="component-modal__modal__item">
+          <img
+            className="component-modal__modal__item__img"
+            src={WalletConnectImage}
+            alt="walletconnect"
+          />
+          <div className="component-modal__modal__item__text">
+            WalletConnect
+          </div>
+        </div>
+      </Modal>
+      <div className="page-mint__container">
+        <img
+          className="page-mint__container__bg"
+          src={MintPageBackground}
+          alt="page-mint-bg"
+        />
         <div className="page-mint__container__footer-left">
           <div>PREVIOUSE SALE</div>
           <div>SOLD</div>
@@ -58,9 +121,21 @@ const Mint = () => {
         />
         <div
           className="page-mint__header__connect-btn"
-          onClick={openWalletModalHandler}
+          onClick={() => {
+            if (active) {
+              disconnect();
+            } else {
+              openWalletModalHandler();
+            }
+          }}
         >
-          Connect Wallet
+          {error instanceof UnsupportedChainIdError
+            ? "Wrong NET"
+            : account
+            ? `${account.substring(0, 6)}...${account.substring(
+                account.length - 4
+              )}`
+            : "Connect Wallet"}
         </div>
         <div className="page-mint__header__back-nft"></div>
         <div className="page-mint__header__current-nft"></div>
