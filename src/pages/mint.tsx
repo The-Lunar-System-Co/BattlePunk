@@ -1,5 +1,4 @@
 import React from "react";
-import Modal from "react-modal";
 
 // components
 import Header from "../components/header";
@@ -9,50 +8,21 @@ import MintPageBackground from "../assets/images/ming-page-bg.webp";
 import MintPageHeaderBackground from "../assets/images/mint-page-header.webp";
 
 const Mint = () => {
-  const [isWalletModalOpen, setIsWalletModalOpen] = React.useState(false);
+  const [isWalletModalOpen, setIsWalletModalOpen] = React.useState(true);
 
-  const onOpenModal = () => setIsWalletModalOpen(true);
-  const onCloseModal = () => setIsWalletModalOpen(false);
+  const openWalletModalHandler = () => setIsWalletModalOpen(true);
+  // const closeWalletModalHandler = () => setIsWalletModalOpen(false);
   return (
     <div className="page-mint">
       <Header />
       <div className="page-mint__container">
-        <Modal
-          isOpen={isWalletModalOpen}
-          shouldCloseOnOverlayClick
-          onRequestClose={onCloseModal}
-          style={{
-            overlay: {
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.75)'
-            },
-            content: {
-              position: 'absolute',
-              top: '100px',
-              left: '100px',
-              right: '100px',
-              bottom: '100px',
-              border: '1px solid #ccc',
-              background: '#fff',
-              overflow: 'auto',
-              WebkitOverflowScrolling: 'touch',
-              borderRadius: '4px',
-              outline: 'none',
-              padding: '20px'
-            }
-          }}
-        >
-          <h2>Simple centered modal</h2>
-        </Modal>
-        <img
-          className="page-mint__container__bg"
-          src={MintPageBackground}
-          alt="page-mint-bg"
-        />
+        {isWalletModalOpen && (
+          <img
+            className="page-mint__container__bg"
+            src={MintPageBackground}
+            alt="page-mint-bg"
+          />
+        )}
         <div className="page-mint__container__footer-left">
           <div>PREVIOUSE SALE</div>
           <div>SOLD</div>
@@ -86,7 +56,10 @@ const Mint = () => {
           src={MintPageHeaderBackground}
           alt="page-mint-header-bg"
         />
-        <div className="page-mint__header__connect-btn" onClick={onOpenModal}>
+        <div
+          className="page-mint__header__connect-btn"
+          onClick={openWalletModalHandler}
+        >
           Connect Wallet
         </div>
         <div className="page-mint__header__back-nft"></div>
