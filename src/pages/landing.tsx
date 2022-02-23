@@ -16,8 +16,8 @@ import Content1 from "../assets/images/landing-page-body-content-1.webp";
 import Content2 from "../assets/images/landing-page-body-content-2.webp";
 import Content3 from "../assets/images/landing-page-body-content-3.webp";
 import Content5 from "../assets/images/landing-page-body-content-5.webp";
-import Scroll from "../assets/images/landing-page-body-content-3-scroll.webp";
-import FooterBg from '../assets/images/landing-page-footer.webp';
+import Scroll from "../assets/images/landing-page-body-content-3-scroll.png";
+import FooterBg from "../assets/images/landing-page-footer.webp";
 
 const Landing: React.FC = () => {
   return (
@@ -116,7 +116,6 @@ const Landing: React.FC = () => {
             loop
             muted
             width="100%"
-            height="100%"
           >
             <source src="/assets/videos/landing-page-2.mp4" type="video/mp4" />
           </video>
@@ -124,8 +123,8 @@ const Landing: React.FC = () => {
             <img src={BodyBorder} alt="content-1" />
           </div>
           <div className="page-landing__body__contents__scroll">
-              <img src={Scroll} alt="scroll" />
-            </div>
+            <img src={Scroll} alt="scroll" />
+          </div>
         </div>
       </div>
       <div className="page-landing__footer">

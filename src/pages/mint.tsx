@@ -11,7 +11,11 @@ import MetamaskImage from "../assets/images/metamask.svg";
 import WalletConnectImage from "../assets/images/walletconnect.svg";
 
 import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
-import { InjectedConnector } from "@web3-react/injected-connector";
+import {
+  InjectedConnector,
+  NoEthereumProviderError
+} from "@web3-react/injected-connector";
+import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 // import { formatEther, parseEther } from "@ethersproject/units";
 // import { Contract } from "@ethersproject/contracts";
 
@@ -24,7 +28,8 @@ const Mint = () => {
     activate,
     deactivate,
     active,
-    error
+    error,
+    // connector
   } = context;
 
   const [isWalletModalOpen, setIsWalletModalOpen] = React.useState(false);
@@ -33,14 +38,42 @@ const Mint = () => {
   const closeWalletModalHandler = () => setIsWalletModalOpen(false);
 
   const connectMetamask = () => {
-    const injected = new InjectedConnector({
+    const injectedConnector = new InjectedConnector({
       supportedChainIds: [1, 3, 4]
     });
-    try {
-      activate(injected);
-    } catch (ex) {
-      console.log(ex);
-    }
+    activate(injectedConnector, err => {
+      console.log("metamaskConnectErr", err);
+      if (err instanceof NoEthereumProviderError) {
+        window.alert("No Ethereum Provider");
+      }
+    });
+  };
+
+  const connectWalletConnect = () => {
+    const RPC_URLS = {
+      1: "https://mainnet.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7",
+      4: "https://rinkeby.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7"
+    };
+    const walletConnectConnector = new WalletConnectConnector({
+      rpc: { 1: RPC_URLS[1] },
+      bridge: "https://bridge.walletconnect.org",
+      qrcode: true,
+      // @ts-ignore
+      pollingInterval: 12000
+    });
+    activate(
+      walletConnectConnector,
+      err => {
+        console.log("-err", err);
+      },
+      false
+    ).catch(err => {
+      if (err instanceof UnsupportedChainIdError) {
+        activate(walletConnectConnector);
+      } else {
+        console.log("Pending Error Occured");
+      }
+    });
   };
 
   const disconnect = () => {
@@ -58,10 +91,13 @@ const Mint = () => {
         isOpen={isWalletModalOpen}
         closeModalHandler={closeWalletModalHandler}
       >
-        <div className="component-modal__modal__item" onClick={() => {
-          connectMetamask();
-          closeWalletModalHandler();
-        }}>
+        <div
+          className="component-modal__modal__item"
+          onClick={() => {
+            connectMetamask();
+            closeWalletModalHandler();
+          }}
+        >
           <img
             className="component-modal__modal__item__img"
             src={MetamaskImage}
@@ -69,7 +105,13 @@ const Mint = () => {
           />
           <div className="component-modal__modal__item__text">Metamask</div>
         </div>
-        <div className="component-modal__modal__item">
+        <div
+          className="component-modal__modal__item"
+          onClick={() => {
+            connectWalletConnect();
+            closeWalletModalHandler();
+          }}
+        >
           <img
             className="component-modal__modal__item__img"
             src={WalletConnectImage}

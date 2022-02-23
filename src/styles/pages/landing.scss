@@ -219,6 +219,10 @@
         }
       }
 
+      &__content-6 {
+        margin-top: -11%;
+      }
+
       &__border {
         position: absolute;
         top: 0%;
@@ -237,7 +241,7 @@
         top: 39%;
         left: 44%;
         right: 28%;
-        bottom: 55%;
+        bottom: 54.5%;
         overflow-y: scroll;
 
         &::-webkit-scrollbar {
