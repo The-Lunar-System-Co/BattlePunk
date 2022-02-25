@@ -3,6 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
   min-height: 100vh;
   padding-top: 100px;
   display: flex;
@@ -37,20 +38,22 @@
           position: absolute;
           right: 10%;
           left: 10%;
-          top: 30%;
+          top: 33%;
           color: white;
           font-size: 18px;
+          text-shadow: rgb(0, 0, 0) 1px 1px 4px;
 
           @media only screen and (max-width: 1200px) {
             font-size: 14px;
           }
-          
+
           @media only screen and (max-width: 600px) {
             font-size: 12px;
           }
         }
       }
     }
+    
     &__coin {
       display: flex;
 
