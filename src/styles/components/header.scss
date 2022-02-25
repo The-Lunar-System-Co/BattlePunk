@@ -1,10 +1,10 @@
 .component-header {
   background-image: url("../../assets/images/header-bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
   height: 120px;
-  color: white;
+  color: #8BEFFE;
   display: flex;
   justify-content: space-between;
   padding: 1% 10%;
