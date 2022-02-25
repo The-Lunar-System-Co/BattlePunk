@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 // main pages
 import Landing from "./pages/landing";
 import Mint from "./pages/mint";
+import LSD from './pages/lsd';
 
 // 404 page
 import NotFound from "./pages/not-found";
@@ -18,6 +19,9 @@ const App: React.FC = () => {
         </Route>
         <Route exact path="/mint">
           <Mint />
+        </Route>
+        <Route exact path="/lsd">
+          <LSD />
         </Route>
         <Route exact path="/not-found">
           <NotFound />

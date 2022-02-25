@@ -23,7 +23,7 @@ const Header = () => {
         </RouterLink>
       </div>
       <div className="component-header__right">
-        <RouterLink to="/">$LSD</RouterLink>
+        <RouterLink to="/lsd">$LSD</RouterLink>
         <RouterLink to="/" tooltip="Coming Very Soon">
           Punkon
         </RouterLink>

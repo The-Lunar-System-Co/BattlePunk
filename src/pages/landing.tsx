@@ -17,7 +17,7 @@ import Content2 from "../assets/images/landing-page-body-content-2.webp";
 import Content3 from "../assets/images/landing-page-body-content-3.webp";
 import Content5 from "../assets/images/landing-page-body-content-5.webp";
 import Scroll from "../assets/images/landing-page-body-content-3-scroll.png";
-import FooterBg from "../assets/images/landing-page-footer.webp";
+import FooterBg from "../assets/images/punkon.png";
 
 const Landing: React.FC = () => {
   return (
@@ -127,28 +127,28 @@ const Landing: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="page-landing__footer">
+      <div className="footer">
         <img
-          className="page-landing__footer__bg"
+          className="footer__bg"
           src={FooterBg}
-          alt="page-landing__footer__bg"
+          alt="footer__bg"
         />
-        <div className="page-landing__footer__social-icons">
+        <div className="footer__social-icons">
           <HyperLink
             href="https://discord.gg/battlepunkarena"
-            className="page-landing__footer__social-icons__social-1"
+            className="footer__social-icons__social-1"
           />
           <HyperLink
             href="https://www.instagram.com/battlepunkarena/"
-            className="page-landing__footer__social-icons__social-2"
+            className="footer__social-icons__social-2"
           />
           <HyperLink
             href="https://twitter.com/BattlepunkNFT/"
-            className="page-landing__footer__social-icons__social-3"
+            className="footer__social-icons__social-3"
           />
           <HyperLink
             href="https://opensea.io/"
-            className="page-landing__footer__social-icons__social-4"
+            className="footer__social-icons__social-4"
           />
         </div>
       </div>
