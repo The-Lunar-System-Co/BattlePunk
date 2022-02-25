@@ -7,7 +7,7 @@ import HyperLink from "../components/hyper-link";
 // images
 import PanelImage from "../assets/images/lsd-page-panel.png";
 import CoinImage from "../assets/images/lsd-page-coin.png";
-import HoloImage from "../assets/images/lsd-page-body-bg.png";
+import HoloImage from "../assets/images/lsd-page-body-bg.webp";
 import DiagramImage from "../assets/images/lsd-page-body-diagram.png";
 import CommunityImage from "../assets/images/lsd-page-body-community.png";
 import PlayImage from "../assets/images/lsd-page-body-play.png";
@@ -36,7 +36,7 @@ const LSD = () => {
         </div>
 
         <div className="page-lsd__body">
-          <img src={HoloImage} alt="page-lsd-body" />
+          <img className="page-lsd__body__bg" src={HoloImage} alt="page-lsd-body" />
           <div className="page-lsd__body__container">
             <div className="page-lsd__body__container__1">
               <div className="page-lsd__body__container__1__left">
