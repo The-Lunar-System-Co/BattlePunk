@@ -211,6 +211,8 @@ const Mint = () => {
         <div className="page-mint__mobile__container__gif">
           <img src={MintPageMobileGif} alt="page-mint-mobile-gif" />
         </div>
+        <div className="page-mint__mobile__container__gif__mask">
+        </div>
         <div className="page-mint__mobile__container__premium-sale">
           PREMIUM SALE
         </div>
