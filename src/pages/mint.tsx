@@ -5,8 +5,9 @@ import Header from "../components/header";
 import Modal from "../components/modal";
 
 // images
-import MintPageBackground from "../assets/images/ming-page-bg.webp";
-import MintPageHeaderBackground from "../assets/images/mint-page-header.webp";
+import MintPageDesktopBackground from "../assets/images/mint-page-desktop-bg.jpg";
+import MintPageMobileBackground from "../assets/images/mint-page-mobile-bg.jpg";
+import MintPageMobileGif from "../assets/images/mint-page-mobile-gif.gif";
 import MetamaskImage from "../assets/images/metamask.svg";
 import WalletConnectImage from "../assets/images/walletconnect.svg";
 
@@ -28,7 +29,7 @@ const Mint = () => {
     activate,
     deactivate,
     active,
-    error,
+    error
     // connector
   } = context;
 
@@ -122,47 +123,15 @@ const Mint = () => {
           </div>
         </div>
       </Modal>
-      <div className="page-mint__container">
+      <div className="page-mint__desktop__container">
         <img
-          className="page-mint__container__bg"
-          src={MintPageBackground}
+          className="page-mint__desktop__container__bg"
+          src={MintPageDesktopBackground}
           alt="page-mint-bg"
         />
-        <div className="page-mint__container__footer-left">
-          <div>PREVIOUSE SALE</div>
-          <div>SOLD</div>
-          <div>1000/1000</div>
-          <div>PRICE</div>
-          <div>0.1ETH</div>
-        </div>
-        <div className="page-mint__container__footer-right">
-          <div>NEXT SALE</div>
-          <div>SOLD</div>
-          <div>0/300</div>
-          <div>PRICE</div>
-          <div>0.3ETH</div>
-        </div>
-        <div className="page-mint__container__footer-center-1">
-          MINT YOUR BATTLER
-        </div>
-        <div className="page-mint__container__footer-center-2">
-          CONNECT TO THE ETHEREUM
-        </div>
-        <div className="page-mint__container__footer-center-3">
-          SOLD 206/500
-        </div>
-        <div className="page-mint__container__footer-center-4">0.15ETH</div>
-        <div className="page-mint__container__footer-center-5">3</div>
-        <div className="page-mint__container__footer-center-6">MINT</div>
-      </div>
-      <div className="page-mint__header">
-        <img
-          className="page-mint__header__bg"
-          src={MintPageHeaderBackground}
-          alt="page-mint-header-bg"
-        />
+
         <div
-          className="page-mint__header__connect-btn"
+          className="page-mint__desktop__container__connect-btn"
           onClick={() => {
             if (active) {
               disconnect();
@@ -179,9 +148,75 @@ const Mint = () => {
               )}`
             : "Connect Wallet"}
         </div>
-        <div className="page-mint__header__back-nft"></div>
-        <div className="page-mint__header__current-nft"></div>
-        <div className="page-mint__header__next-nft"></div>
+
+        <div className="page-mint__desktop__container__footer-left">
+          <div>PREVIOUSE SALE</div>
+          <div>SOLD</div>
+          <div>1000/1000</div>
+          <div>PRICE</div>
+          <div>0.1ETH</div>
+        </div>
+        <div className="page-mint__desktop__container__footer-right">
+          <div>NEXT SALE</div>
+          <div>SOLD</div>
+          <div>0/300</div>
+          <div>PRICE</div>
+          <div>0.3ETH</div>
+        </div>
+        <div className="page-mint__desktop__container__footer-center-1">
+          MINT YOUR BATTLER
+        </div>
+        <div className="page-mint__desktop__container__footer-center-2">
+          CONNECT TO THE ETHEREUM
+        </div>
+        <div className="page-mint__desktop__container__footer-center-3">
+          SOLD 206/500
+        </div>
+        <div className="page-mint__desktop__container__footer-center-4">
+          0.15ETH
+        </div>
+        <div className="page-mint__desktop__container__footer-center-5">3</div>
+        <div className="page-mint__desktop__container__footer-center-6">
+          MINT
+        </div>
+      </div>
+
+      <div className="page-mint__mobile__container">
+        <img
+          className="page-mint__mobile__container__bg"
+          src={MintPageMobileBackground}
+          alt="page-mint-bg"
+        />
+        <div
+          className="page-mint__mobile__container__connect-btn"
+          onClick={() => {
+            if (active) {
+              disconnect();
+            } else {
+              openWalletModalHandler();
+            }
+          }}
+        >
+          {error instanceof UnsupportedChainIdError
+            ? "Wrong NET"
+            : account
+            ? `${account.substring(0, 6)}...${account.substring(
+                account.length - 4
+              )}`
+            : "Connect Wallet"}
+        </div>
+        <div className="page-mint__mobile__container__gif">
+          <img src={MintPageMobileGif} alt="page-mint-mobile-gif" />
+        </div>
+        <div className="page-mint__mobile__container__premium-sale">
+          PREMIUM SALE
+        </div>
+        <div className="page-mint__mobile__container__connected-to-ethereum">
+          CONNECTED TO ETHEREUM
+        </div>
+        <div className="page-mint__mobile__container__price">0.15ETH</div>
+        <div className="page-mint__mobile__container__id">3</div>
+        <div className="page-mint__mobile__container__mint-btn">MINT</div>
       </div>
     </div>
   );

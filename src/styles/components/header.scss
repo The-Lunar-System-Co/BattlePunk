@@ -1,5 +1,5 @@
 .component-header {
-  background-image: url("../../assets/images/header-bg.png");
+  background-image: url("../../assets/images/header-desktop-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
@@ -18,6 +18,7 @@
 
   @media only screen and (max-width: 1200px) {
     height: 90px;
+    background-image: url("../../assets/images/header-mobile-bg.png");
   }
 
   &__left,
@@ -29,49 +30,12 @@
     @media only screen and (max-width: 1200px) {
       display: none;
     }
-
-    div {
-      text-shadow: 0px 0px 10px black;
-      cursor: pointer;
-      transition-duration: 0.3s;
-      height: 20px;
-      position: relative;
-
-      &:hover {
-        text-shadow: 0px 0px 10px white;
-      }
-
-      &:hover div.tooltip {
-        opacity: 100%;
-      }
-
-      div.tooltip {
-        opacity: 0%;
-        position: absolute;
-        top: 20px;
-        left: 0px;
-        background-color: #000000;
-        border-radius: 5px;
-        padding: 10px;
-        color: white;
-        width: 200px;
-        font-size: 16px;
-        height: fit-content;
-      }
-
-      div.tooltip:hover {
-        text-shadow: 0px 0px 0px transparent;
-      }
-    }
   }
 
   &__mobile-nav-btn {
     position: absolute;
     right: 5px;
     top: 5px;
-    height: 40px;
-    width: 40px;
-    border-radius: 10px;
     display: none;
     align-items: center;
     justify-content: center;
@@ -85,7 +49,7 @@
       margin: 2px auto;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      background-color: #ffffff;
+      background-color: #8BEFFE;
     }
 
     @media only screen and (max-width: 1200px) {
@@ -125,14 +89,6 @@
 
     @media only screen and (max-width: 1000px) {
       display: flex;
-    }
-
-    &__item {
-      padding: 16px;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
   }
 }

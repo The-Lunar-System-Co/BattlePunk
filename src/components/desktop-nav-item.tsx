@@ -1,15 +1,20 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-interface IHyperLinkProps {
+interface IDesktopNavItem {
   to: string;
   tooltip?: string;
 }
 
-const RouterLink: React.FC<IHyperLinkProps> = ({ to, tooltip, children }) => {
+const DesktopNavItem: React.FC<IDesktopNavItem> = ({
+  to,
+  tooltip,
+  children
+}) => {
   const history = useHistory();
   return (
     <div
+      className="component-desktop-nav-item"
       onClick={() => {
         history.push(to);
       }}
@@ -20,4 +25,4 @@ const RouterLink: React.FC<IHyperLinkProps> = ({ to, tooltip, children }) => {
   );
 };
 
-export default RouterLink;
+export default DesktopNavItem;

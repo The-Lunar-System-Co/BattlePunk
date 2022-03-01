@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import RouterLink from "./router-link";
+import DesktopNavItem from "./desktop-nav-item";
+import MobileNavItem from "./mobile-nav-item";
 
 const Header = () => {
   const [isMobileDropDownOpen, setIsMobileDropDownOpen] = useState(false);
@@ -7,81 +8,51 @@ const Header = () => {
   return (
     <div className="component-header">
       <div className="component-header__left">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/mint">Mint</RouterLink>
-        <RouterLink to="/" tooltip="Coming Soon">
+        <DesktopNavItem to="/">Home</DesktopNavItem>
+        <DesktopNavItem to="/mint">Mint</DesktopNavItem>
+        <DesktopNavItem to="/" tooltip="Coming Soon">
           PunkyDex
-        </RouterLink>
-        <RouterLink to="/" tooltip="Under Construction">
+        </DesktopNavItem>
+        <DesktopNavItem to="/" tooltip="Under Construction">
           ArenaMarket
-        </RouterLink>
-        <RouterLink
+        </DesktopNavItem>
+        <DesktopNavItem
           to="/"
           tooltip="Coming Soon: See Battle Paper For Planeed Release Date"
         >
           Play
-        </RouterLink>
+        </DesktopNavItem>
       </div>
       <div className="component-header__right">
-        <RouterLink to="/lsd">$LSD</RouterLink>
-        <RouterLink to="/" tooltip="Coming Very Soon">
+        <DesktopNavItem to="/lsd">$LSD</DesktopNavItem>
+        <DesktopNavItem to="/" tooltip="Coming Very Soon">
           Punkon
-        </RouterLink>
-        <RouterLink to="/">BattlePaper</RouterLink>
-        <RouterLink to="/" tooltip="Coming Soon">
+        </DesktopNavItem>
+        <DesktopNavItem to="/">BattlePaper</DesktopNavItem>
+        <DesktopNavItem to="/" tooltip="Coming Soon">
           FAQ
-        </RouterLink>
-        <RouterLink
+        </DesktopNavItem>
+        <DesktopNavItem
           to="/"
           tooltip="Coming Soon: Email us at info@lunarsystem.co about partnership inquires"
         >
           Partners
-        </RouterLink>
+        </DesktopNavItem>
       </div>
       <div
         className="component-header__mobile-nav"
         style={{ maxHeight: isMobileDropDownOpen ? "100vh" : "0px" }}
       >
-        <div className="component-header__mobile-nav__item">
-          <div>Home</div>
-          <div></div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>Mint</div>
-          <div></div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>PunkyDex</div>
-          <div>Coming Soon</div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>ArenaMarket</div>
-          <div>Coming Soon</div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>Play</div>
-          <div>Coming Soon</div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>$LSD</div>
-          <div></div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>Punkon</div>
-          <div>Coming Soon</div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>BattlePaper</div>
-          <div></div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>Faq</div>
-          <div>Coming Soon</div>
-        </div>
-        <div className="component-header__mobile-nav__item">
-          <div>Partners</div>
-          <div>Coming Soon</div>
-        </div>
+        <MobileNavItem>Home</MobileNavItem>
+        <MobileNavItem>Mint</MobileNavItem>
+        <MobileNavItem isComingSoon>PunkyDex</MobileNavItem>
+        <MobileNavItem isComingSoon>ArenaMarket</MobileNavItem>
+        <MobileNavItem isComingSoon>Play</MobileNavItem>
+        <MobileNavItem>$LSD</MobileNavItem>
+        <MobileNavItem isComingSoon>Punkon</MobileNavItem>
+        <MobileNavItem>BattlePaper</MobileNavItem>
+        <MobileNavItem isComingSoon>Faq</MobileNavItem>
+        <MobileNavItem isComingSoon>Partners</MobileNavItem>
       </div>
       <div
         className={[

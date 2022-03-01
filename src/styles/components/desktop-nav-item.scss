@@ -1,0 +1,33 @@
+.component-desktop-nav-item {
+  text-shadow: 0px 0px 10px black;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  height: 20px;
+  position: relative;
+
+  &:hover {
+    text-shadow: 0px 0px 10px white;
+  }
+
+  &:hover div.tooltip {
+    opacity: 100%;
+  }
+
+  div.tooltip {
+    opacity: 0%;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: 200px;
+    font-size: 16px;
+    height: fit-content;
+  }
+
+  div.tooltip:hover {
+    text-shadow: 0px 0px 0px transparent;
+  }
+}
