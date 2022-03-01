@@ -6,7 +6,7 @@ import Modal from "../components/modal";
 
 // images
 import MintPageDesktopBackground from "../assets/images/mint-page-desktop-bg.jpg";
-import MintPageMobileBackground from "../assets/images/mint-page-mobile-bg.jpg";
+import MintPageMobileBackground from "../assets/images/mint-page-mobile-bg.webp";
 import MintPageMobileGif from "../assets/images/mint-page-mobile-gif.gif";
 import MetamaskImage from "../assets/images/metamask.svg";
 import WalletConnectImage from "../assets/images/walletconnect.svg";
@@ -182,6 +182,9 @@ const Mint = () => {
       </div>
 
       <div className="page-mint__mobile__container">
+        <div className="page-mint__mobile__container__gif">
+          <img src={MintPageMobileGif} alt="page-mint-mobile-gif" />
+        </div>
         <img
           className="page-mint__mobile__container__bg"
           src={MintPageMobileBackground}

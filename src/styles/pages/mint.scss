@@ -16,14 +16,14 @@
 
     &__gif {
       position: absolute;
-      top: 26.5%;
-      left: 23%;
-      right: 23%;
-      bottom: 60%;
+      top: 23.5%;
+      left: 16%;
+      right: 16%;
+      bottom: 57%;
       font-size: 16px;
       color: white;
       font-family: RelishGargler;
-      background-color: #ff000050;
+      z-index: -100;
 
       img {
         width: 100%;
