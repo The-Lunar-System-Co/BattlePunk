@@ -1,7 +1,6 @@
 import React from "react";
 
 // components
-import Header from "../components/header";
 import Modal from "../components/modal";
 
 // images
@@ -87,7 +86,6 @@ const Mint = () => {
 
   return (
     <div className="page-mint">
-      <Header />
       <Modal
         isOpen={isWalletModalOpen}
         closeModalHandler={closeWalletModalHandler}

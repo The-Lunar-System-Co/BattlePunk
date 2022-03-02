@@ -4,7 +4,7 @@
   background-size: contain;
   background-position: top center;
   height: 120px;
-  color: #8BEFFE;
+  color: #8beffe;
   display: flex;
   justify-content: space-between;
   padding: 1% 10%;
@@ -34,13 +34,18 @@
 
   &__mobile-nav-btn {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 15px;
+    top: 15px;
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
+    border: 2px solid #8beffe;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: #110f23;
 
     &__bar {
       display: block;
@@ -49,7 +54,7 @@
       margin: 2px auto;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      background-color: #8BEFFE;
+      background-color: #8beffe;
     }
 
     @media only screen and (max-width: 1200px) {
@@ -71,7 +76,7 @@
 
   &__mobile-nav {
     display: none;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     position: fixed;
     top: 0px;
@@ -85,10 +90,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #000000cc;
+    background-color: #110f23;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &__logo{
+      font-size: 32px;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
 
     @media only screen and (max-width: 1000px) {
       display: flex;
+    }
+
+    .component-mobile-nav-item {
+      border-bottom: 1px solid #281e37;
+    }
+
+    .component-mobile-nav-item:last-child {
+      border-bottom: none;
     }
   }
 }

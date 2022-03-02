@@ -43,16 +43,67 @@ const Header = () => {
         className="component-header__mobile-nav"
         style={{ maxHeight: isMobileDropDownOpen ? "100vh" : "0px" }}
       >
-        <MobileNavItem>Home</MobileNavItem>
-        <MobileNavItem>Mint</MobileNavItem>
-        <MobileNavItem isComingSoon>PunkyDex</MobileNavItem>
-        <MobileNavItem isComingSoon>ArenaMarket</MobileNavItem>
-        <MobileNavItem isComingSoon>Play</MobileNavItem>
-        <MobileNavItem>$LSD</MobileNavItem>
-        <MobileNavItem isComingSoon>Punkon</MobileNavItem>
-        <MobileNavItem>BattlePaper</MobileNavItem>
-        <MobileNavItem isComingSoon>Faq</MobileNavItem>
-        <MobileNavItem isComingSoon>Partners</MobileNavItem>
+        <div className="component-header__mobile-nav__logo">BattlePunk</div>
+        <MobileNavItem to="/" setIsMobileDropDownOpen={setIsMobileDropDownOpen}>
+          Home
+        </MobileNavItem>
+        <MobileNavItem
+          to="/mint"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          Mint
+        </MobileNavItem>
+        <MobileNavItem
+          isComingSoon
+          to="/"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          PunkyDex
+        </MobileNavItem>
+        <MobileNavItem
+          isComingSoon
+          to="/"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          ArenaMarket
+        </MobileNavItem>
+        <MobileNavItem
+          isComingSoon
+          to="/"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          Play
+        </MobileNavItem>
+        <MobileNavItem
+          to="/lsd"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          $LSD
+        </MobileNavItem>
+        <MobileNavItem
+          isComingSoon
+          to="/"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          Punkon
+        </MobileNavItem>
+        <MobileNavItem to="/" setIsMobileDropDownOpen={setIsMobileDropDownOpen}>
+          BattlePaper
+        </MobileNavItem>
+        <MobileNavItem
+          isComingSoon
+          to="/"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          Faq
+        </MobileNavItem>
+        <MobileNavItem
+          isComingSoon
+          to="/"
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
+          Partners
+        </MobileNavItem>
       </div>
       <div
         className={[
@@ -69,4 +120,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default (Header);

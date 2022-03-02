@@ -1,7 +1,6 @@
 import React from "react";
 
 // components
-import Header from "../components/header";
 import HyperLink from "../components/hyper-link";
 
 // images
@@ -18,7 +17,6 @@ import FooterBg from "../assets/images/punkon.png";
 const LSD = () => {
   return (
     <div className="page-lsd">
-      <Header />
       <div className="container">
         <div className="page-lsd__header">
           <div className="page-lsd__header__panel">

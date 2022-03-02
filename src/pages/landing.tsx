@@ -1,7 +1,6 @@
 import React from "react";
 
 // components
-import Header from "../components/header";
 import HyperLink from "../components/hyper-link";
 
 // images
@@ -22,7 +21,6 @@ import FooterBg from "../assets/images/punkon.png";
 const Landing: React.FC = () => {
   return (
     <div className="page-landing">
-      <Header />
       <div className="page-landing__header">
         <div className="page-landing__header__container">
           <img
