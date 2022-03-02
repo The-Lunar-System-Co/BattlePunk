@@ -43,7 +43,7 @@ const Header = () => {
         className="component-header__mobile-nav"
         style={{ maxHeight: isMobileDropDownOpen ? "100vh" : "0px" }}
       >
-        <div className="component-header__mobile-nav__logo">BattlePunk</div>
+        <div className="component-header__mobile-nav__logo">Menu</div>
         <MobileNavItem to="/" setIsMobileDropDownOpen={setIsMobileDropDownOpen}>
           Home
         </MobileNavItem>
