@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 // header
 import Header from "./components/header";
@@ -17,7 +12,7 @@ import LSD from "./pages/lsd";
 // 404 page
 import NotFound from "./pages/not-found";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <>
       <BrowserRouter>

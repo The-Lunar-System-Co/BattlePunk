@@ -1,5 +1,6 @@
 .page-mint {
   min-height: 100vh;
+
   &__mobile__container {
     display: none;
 
@@ -28,7 +29,7 @@
         width: 100%;
       }
     }
-    
+
     &__gif__mask {
       position: absolute;
       top: 23.5%;

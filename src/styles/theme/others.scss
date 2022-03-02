@@ -1,12 +1,12 @@
 body {
   margin: 0px;
-  overscroll-behavior-y: none;
 }
 
 img {
   margin: 0px;
   padding: 0px;
   display: block;
+  pointer-events: none;
 }
 
 video {
