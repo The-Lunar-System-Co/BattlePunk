@@ -190,7 +190,9 @@ const Mint = () => {
         />
         <div
           className="page-mint__mobile__container__connect-btn"
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
+            console.log('kkk')
             if (active) {
               disconnect();
             } else {
