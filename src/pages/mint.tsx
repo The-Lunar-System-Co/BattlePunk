@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // components
 import Modal from "../components/modal";
@@ -12,17 +12,27 @@ import WalletConnectImage from "../assets/images/walletconnect.svg";
 
 import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
 import {
-  InjectedConnector,
-  NoEthereumProviderError
+  InjectedConnector
+  // NoEthereumProviderError
 } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
-// import { formatEther, parseEther } from "@ethersproject/units";
-// import { Contract } from "@ethersproject/contracts";
+import { formatEther } from "@ethersproject/units";
+import { Contract } from "@ethersproject/contracts";
+import { ToastContainer, toast } from "react-toastify";
+
+// abis
+import BABPABI from "../abis/battlepunk.json";
+
+// variables
+const BABPAddress = "0x68087a38a8eEAf7c614b634eD50837de71069d47";
+const transactionSuccessText = "Transaction Success";
+const transactionFailText = "Transaction Fail";
+const transactionRejectText = "Transaction Reject";
 
 const Mint = () => {
   const context = useWeb3React();
   const {
-    // library,
+    library,
     // chainId,
     account,
     activate,
@@ -39,20 +49,23 @@ const Mint = () => {
 
   const connectMetamask = () => {
     const injectedConnector = new InjectedConnector({
-      supportedChainIds: [1, 3, 4]
+      supportedChainIds: [1]
     });
-    activate(injectedConnector, err => {
-      console.log("metamaskConnectErr", err);
-      if (err instanceof NoEthereumProviderError) {
-        window.alert("No Ethereum Provider");
-      }
-    });
+    // activate(injectedConnector, err => {
+    //   console.log("metamaskConnectErr", err);
+    //   if (err instanceof NoEthereumProviderError) {
+    //     window.alert("No Ethereum Provider");
+    //   }
+    //   else if (err instanceof UnsupportedChainIdError) {
+    //     window.alert("Unsupported chainId");
+    //   }
+    // });
+    activate(injectedConnector);
   };
 
   const connectWalletConnect = () => {
     const RPC_URLS = {
-      1: "https://mainnet.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7",
-      4: "https://rinkeby.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7"
+      1: "https://mainnet.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7"
     };
     const walletConnectConnector = new WalletConnectConnector({
       rpc: { 1: RPC_URLS[1] },
@@ -84,8 +97,89 @@ const Mint = () => {
     }
   };
 
+  const mint = async () => {
+    if (getMintButtonEnabled()) {
+      const BABPContract = new Contract(
+        BABPAddress,
+        BABPABI,
+        library.getSigner()
+      );
+
+      try {
+        const transaction = await BABPContract.mint(count);
+        const receipt = await transaction.wait();
+        setTransactionPending(false);
+        if (receipt.status) {
+          toast.success(transactionSuccessText);
+        } else {
+          toast.error(transactionFailText);
+        }
+      } catch (ex) {
+        toast.warn(transactionRejectText);
+        setTransactionPending(false);
+      }
+    }
+  };
+
+  const getMintButtonEnabled = () => {
+    if (!active) {
+      return false;
+    }
+    if (transactionPending) {
+      return false;
+    }
+    if (count === 0) {
+      return false;
+    }
+    return true;
+  };
+
+  const [price, setPrice] = useState("0");
+  const [totalSupply, setTotalSupply] = useState(0);
+  const [maxSupply, setMaxSupply] = useState(0);
+  const [count, setCount] = useState(0);
+  const [maxCount, setMaxCount] = useState(0);
+
+  const [transactionPending, setTransactionPending] = useState(false);
+
+  useEffect(() => {
+    const init = async () => {
+      if (active && !error) {
+        const BABPContract = new Contract(
+          BABPAddress,
+          BABPABI,
+          library.getSigner()
+        );
+        const _price = await BABPContract.PRICE();
+        setPrice(parseFloat(formatEther(_price)).toPrecision(2));
+
+        const _maxCount = await BABPContract.MAX_BY_MINT();
+        setMaxCount(_maxCount.toNumber());
+
+        const _maxSupply = await BABPContract.MAX_SUPPLY();
+        setMaxSupply(_maxSupply.toNumber());
+
+        const _totalSupply = await BABPContract.totalSupply();
+        setTotalSupply(_totalSupply.toNumber());
+      }
+    };
+    init();
+  }, [active, error, library]);
+
   return (
     <div className="page-mint">
+      <ToastContainer
+        position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <Modal
         isOpen={isWalletModalOpen}
         closeModalHandler={closeWalletModalHandler}
@@ -165,17 +259,43 @@ const Mint = () => {
           MINT YOUR BATTLER
         </div>
         <div className="page-mint__desktop__container__footer-center-2">
-          CONNECT TO THE ETHEREUM
+          {active ? "CONNECT TO THE ETHEREUM" : "---"}
         </div>
         <div className="page-mint__desktop__container__footer-center-3">
-          SOLD 206/500
+          SOLD {totalSupply}/{maxSupply}
         </div>
+
         <div className="page-mint__desktop__container__footer-center-4">
-          0.15ETH
+          {active ? `${parseFloat(price) * count} ETH` : "--- ETH"}
         </div>
-        <div className="page-mint__desktop__container__footer-center-5">3</div>
-        <div className="page-mint__desktop__container__footer-center-6">
-          MINT
+
+        <div className="page-mint__desktop__container__footer-center-5">
+          {count}
+        </div>
+
+        <div
+          className="page-mint__desktop__container__footer-center-arrow-left"
+          onClick={() => {
+            if (active && count > 0) {
+              setCount(count - 1);
+            }
+          }}
+        ></div>
+
+        <div
+          className="page-mint__desktop__container__footer-center-arrow-right"
+          onClick={() => {
+            if (active && count < maxCount) {
+              setCount(count + 1);
+            }
+          }}
+        ></div>
+
+        <div
+          className="page-mint__desktop__container__footer-center-6"
+          onClick={mint}
+        >
+          {transactionPending ? "PENDING" : "MINT"}
         </div>
       </div>
 
@@ -190,9 +310,9 @@ const Mint = () => {
         />
         <div
           className="page-mint__mobile__container__connect-btn"
-          onClick={(e) => {
+          onClick={e => {
             e.preventDefault();
-            console.log('kkk')
+            console.log("kkk");
             if (active) {
               disconnect();
             } else {
@@ -211,17 +331,38 @@ const Mint = () => {
         <div className="page-mint__mobile__container__gif">
           <img src={MintPageMobileGif} alt="page-mint-mobile-gif" />
         </div>
-        <div className="page-mint__mobile__container__gif__mask">
-        </div>
+        <div className="page-mint__mobile__container__gif__mask"></div>
         <div className="page-mint__mobile__container__premium-sale">
           PREMIUM SALE
         </div>
         <div className="page-mint__mobile__container__connected-to-ethereum">
-          CONNECTED TO ETHEREUM
+          {active ? "CONNECT TO THE ETHEREUM" : "---"}
         </div>
-        <div className="page-mint__mobile__container__price">0.15ETH</div>
-        <div className="page-mint__mobile__container__id">3</div>
-        <div className="page-mint__mobile__container__mint-btn">MINT</div>
+        <div className="page-mint__mobile__container__price">
+          {active ? `${parseFloat(price) * count} ETH` : "--- ETH"}
+        </div>
+
+        <div
+          className="page-mint__mobile__container__arrow-left"
+          onClick={() => {
+            if (active && count > 0) {
+              setCount(count - 1);
+            }
+          }}
+        ></div>
+        <div
+          className="page-mint__mobile__container__arrow-right"
+          onClick={() => {
+            if (active && count < maxCount) {
+              setCount(count + 1);
+            }
+          }}
+        ></div>
+
+        <div className="page-mint__mobile__container__count">{count}</div>
+        <div className="page-mint__mobile__container__mint-btn" onClick={mint}>
+          {transactionPending ? "PENDING" : "MINT"}
+        </div>
       </div>
     </div>
   );

@@ -83,7 +83,7 @@
       color: white;
     }
 
-    &__id {
+    &__count {
       position: absolute;
       top: 73.5%;
       left: 40%;
@@ -101,6 +101,22 @@
       bottom: 13%;
       font-size: 16px;
       color: white;
+    }
+
+    &__arrow-left {
+      position: absolute;
+      top: 73.5%;
+      left: 30%;
+      right: 60%;
+      bottom: 21.5%;
+    }
+
+    &__arrow-right {
+      position: absolute;
+      top: 73.5%;
+      left: 60%;
+      right: 30%;
+      bottom: 21.5%;
     }
 
     div {
@@ -186,7 +202,7 @@
       left: 39%;
       right: 39%;
       bottom: 37.7%;
-      top: 60.7%;
+      top: 61%;
       font-size: 13px;
     }
 
@@ -195,8 +211,9 @@
       left: 39%;
       right: 39%;
       bottom: 32.5%;
-      top: 63.5%;
-      font-size: 28px;
+      top: 64%;
+      font-size: 24px;
+      text-shadow: 0px 0px 4px black;
     }
 
     &__footer-center-4 {
@@ -204,8 +221,26 @@
       left: 40%;
       right: 40%;
       bottom: 27.5%;
-      top: 69%;
-      font-size: 28px;
+      top: 69.5%;
+      font-size: 24px;
+      text-shadow: 0px 0px 4px black;
+    }
+
+    &__footer-center-arrow-left {
+      position: absolute;
+      left: 40%;
+      right: 56%;
+      bottom: 23%;
+      top: 73.8%;
+      cursor: pointer;
+    }
+    &__footer-center-arrow-right {
+      position: absolute;
+      left: 56%;
+      right: 40%;
+      bottom: 23%;
+      top: 73.8%;
+      cursor: pointer;
     }
 
     &__footer-center-5 {
@@ -213,8 +248,9 @@
       left: 43%;
       right: 43%;
       bottom: 23%;
-      top: 73.8%;
+      top: 74.2%;
       font-size: 28px;
+      text-shadow: 0px 0px 4px black;
     }
 
     &__footer-center-6 {
@@ -222,7 +258,7 @@
       left: 43%;
       right: 43%;
       bottom: 17%;
-      top: 79.5%;
+      top: 80%;
       font-size: 40px;
       cursor: pointer;
       &:hover {

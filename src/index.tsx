@@ -8,6 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 
 // global scss
 import "./styles/index.scss";
+import "react-toastify/dist/ReactToastify.css";
 
 function getLibrary(provider: any) {
   const library = new Web3Provider(provider);
