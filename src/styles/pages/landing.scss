@@ -413,7 +413,7 @@
       align-items: center;
       justify-content: space-between;
 
-      div{
+      div {
         width: 15%;
         height: 40px;
         // background-color: red;
@@ -421,13 +421,13 @@
     }
   }
 
-  &__section-2{
+  &__section-2 {
     position: relative;
-    img{
+    img {
       width: 100%;
     }
 
-    &__text{
+    &__text {
       position: absolute;
       top: 36%;
       bottom: 46%;
@@ -441,13 +441,13 @@
     }
   }
 
-  &__section-3{
+  &__section-3 {
     position: relative;
-    img{
+    img {
       width: 100%;
     }
 
-    &__text{
+    &__text {
       position: absolute;
       top: 36%;
       bottom: 46%;
@@ -461,13 +461,13 @@
     }
   }
 
-  &__section-4{
+  &__section-4 {
     position: relative;
-    img{
+    img {
       width: 100%;
     }
 
-    &__text{
+    &__text {
       position: absolute;
       top: 36%;
       bottom: 46%;
@@ -481,13 +481,13 @@
     }
   }
 
-  &__section-5{
+  &__section-5 {
     position: relative;
-    img{
+    img {
       width: 100%;
     }
 
-    &__scroll{
+    &__scroll {
       position: absolute;
       top: 16%;
       bottom: 12%;
@@ -497,51 +497,125 @@
       text-align: center;
       overflow: scroll;
 
-      img{
+      img {
         width: 100%;
       }
     }
   }
 
-  &__section-6{
+  &__section-6 {
     position: relative;
-    img{
+    img {
       width: 100%;
     }
   }
 
-  &__section-7{
+  &__section-7 {
     position: relative;
-    img{
+    img {
       width: 100%;
+    }
+    &__text {
+      position: absolute;
+      top: 61%;
+      bottom: 26%;
+      left: 32%;
+      right: 32%;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-shadow: 0px 0px 4px black;
     }
   }
 
-  &__section-8{
+  &__section-8 {
     position: relative;
-    img{
+    img {
       width: 100%;
+    }
+    &__text {
+      position: absolute;
+      top: 61%;
+      bottom: 26%;
+      left: 32%;
+      right: 32%;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-shadow: 0px 0px 4px black;
     }
   }
 
-  &__section-9{
+  &__section-9 {
     position: relative;
-    img{
+    img {
       width: 100%;
+    }
+    &__text {
+      position: absolute;
+      top: 61%;
+      bottom: 26%;
+      left: 32%;
+      right: 32%;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-shadow: 0px 0px 4px black;
     }
   }
 
-  &__section-10{
+  &__section-10 {
     position: relative;
-    img{
+    img {
       width: 100%;
+    }
+    &__text {
+      position: absolute;
+      top: 61%;
+      bottom: 26%;
+      left: 32%;
+      right: 32%;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-shadow: 0px 0px 4px black;
     }
   }
 
-  &__section-11{
+  &__section-11 {
     position: relative;
-    img{
+    img {
       width: 100%;
+    }
+    &__video{
+      position: absolute;
+      top: 20%;
+      bottom: 54%;
+      left: 0%;
+      right: 0%;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000000aa;
+
+      img{
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 }

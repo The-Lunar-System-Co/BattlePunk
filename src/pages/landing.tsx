@@ -35,6 +35,7 @@ import Section8 from "../assets/images/mobile-home/section-8.webp";
 import Section9 from "../assets/images/mobile-home/section-9.webp";
 import Section10 from "../assets/images/mobile-home/section-10.webp";
 import Section11 from "../assets/images/mobile-home/section-11.webp";
+import PlayIcon from "../assets/images/mobile-home/play.png";
 
 const Landing: React.FC = () => {
   return (
@@ -198,10 +199,11 @@ const Landing: React.FC = () => {
           </div>
           <div className="page-landing-mobile__section-1__text">
             the battlepunks are a collection of 10,000 galactic hero nfts at the
-            heart of the battlepunk arena trading card game.<br/><br/> get your battlepunk
-            to gain early access to the game, as well as exclusive access to
-            drops, events, and other benefits within the battlepunk arena
-            ecosystem.
+            heart of the battlepunk arena trading card game.
+            <br />
+            <br /> get your battlepunk to gain early access to the game, as well
+            as exclusive access to drops, events, and other benefits within the
+            battlepunk arena ecosystem.
           </div>
           <div className="page-landing-mobile__section-1__mint-btn"></div>
           <div className="page-landing-mobile__section-1__social-icons">
@@ -226,7 +228,7 @@ const Landing: React.FC = () => {
             the battlepunks are a collection of 10,000 galactic hero nfts at the
           </div>
         </div>
-        
+
         <div className="page-landing-mobile__section-4">
           <img src={Section4} alt="page-landing-mobile-section-4" />
           <div className="page-landing-mobile__section-4__text">
@@ -240,29 +242,41 @@ const Landing: React.FC = () => {
             <img src={Scroll} alt="page-landing-mobile-section-5-scroll" />
           </div>
         </div>
-        
+
         <div className="page-landing-mobile__section-6">
           <img src={Section6} alt="page-landing-mobile-section-6" />
         </div>
 
         <div className="page-landing-mobile__section-7">
           <img src={Section7} alt="page-landing-mobile-section-7" />
+          <div className="page-landing-mobile__section-7__text">EXPLORE</div>
         </div>
 
         <div className="page-landing-mobile__section-8">
           <img src={Section8} alt="page-landing-mobile-section-8" />
+          <div className="page-landing-mobile__section-8__text">COLLECT</div>
         </div>
 
         <div className="page-landing-mobile__section-9">
           <img src={Section9} alt="page-landing-mobile-section-9" />
+          <div className="page-landing-mobile__section-9__text">BREED</div>
         </div>
 
         <div className="page-landing-mobile__section-10">
           <img src={Section10} alt="page-landing-mobile-section-10" />
+          <div className="page-landing-mobile__section-10__text">BATTLE</div>
         </div>
 
         <div className="page-landing-mobile__section-11">
           <img src={Section11} alt="page-landing-mobile-section-11" />
+          <a
+            className="page-landing-mobile__section-11__video"
+            href="https://youtu.be/ND6tcgTmU-c"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={PlayIcon} alt="page-landing-mobile-section-11-video" />
+          </a>
         </div>
       </div>
     </>
