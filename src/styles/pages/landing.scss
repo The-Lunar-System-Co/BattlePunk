@@ -7,7 +7,7 @@
   padding-top: 0px;
 
   @media only screen and (max-width: 800px) {
-    padding-top: 100px;
+    display: none;
   }
 
   &__header {
@@ -261,6 +261,100 @@
         img {
           width: 100%;
         }
+      }
+    }
+  }
+}
+
+.page-landing-mobile {
+  display: none;
+  background-image: url("../../assets/images/landing-page-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+
+  @media only screen and (max-width: 800px) {
+    display: block;
+  }
+
+  &__header {
+    &__hero-0 {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__hero-1 {
+      margin-top: -50px;
+      animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      -moz-animation-delay: 0s;
+      img {
+        width: 50%;
+      }
+    }
+    &__hero-2 {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -50px;
+      animation-delay: 1s;
+      -webkit-animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      img {
+        width: 50%;
+      }
+    }
+    &__hero-3 {
+      margin-top: -80px;
+      animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+      -moz-animation-delay: 2s;
+      img {
+        width: 70%;
+      }
+    }
+    &__hero-4 {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -100px;
+      animation-delay: 3s;
+      -webkit-animation-delay: 3s;
+      -moz-animation-delay: 3s;
+      img {
+        width: 50%;
+      }
+    }
+
+    
+    &__hero-1,
+    &__hero-2,
+    &__hero-3,
+    &__hero-4 {
+      -webkit-animation-name: bounce;
+      -moz-animation-name: bounce;
+      animation-name: bounce;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      -moz-animation-direction: alternate;
+      animation-direction: alternate;
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      animation-duration: 2s;
+    }
+
+    @keyframes bounce {
+      0% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+      }
+      100% {
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        transform: translateY(10px);
       }
     }
   }
