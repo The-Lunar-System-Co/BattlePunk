@@ -19,11 +19,22 @@ import Scroll from "../assets/images/landing-page-body-content-3-scroll.png";
 import FooterBg from "../assets/images/punkon.png";
 
 // mobile images
-import Hero0 from "../assets/images/mobile-home/hero-0.png";
-import Hero1 from "../assets/images/mobile-home/hero-1.png";
-import Hero2 from "../assets/images/mobile-home/hero-2.png";
-import Hero3 from "../assets/images/mobile-home/hero-3.png";
-import Hero4 from "../assets/images/mobile-home/hero-4.png";
+import Hero0 from "../assets/images/mobile-home/hero-0.webp";
+import Hero1 from "../assets/images/mobile-home/hero-1.webp";
+import Hero2 from "../assets/images/mobile-home/hero-2.webp";
+import Hero3 from "../assets/images/mobile-home/hero-3.webp";
+import Hero4 from "../assets/images/mobile-home/hero-4.webp";
+import Section1 from "../assets/images/mobile-home/section-1.webp";
+import Section2 from "../assets/images/mobile-home/section-2.webp";
+import Section3 from "../assets/images/mobile-home/section-3.webp";
+import Section4 from "../assets/images/mobile-home/section-4.webp";
+import Section5 from "../assets/images/mobile-home/section-5.webp";
+import Section6 from "../assets/images/mobile-home/section-6.webp";
+import Section7 from "../assets/images/mobile-home/section-7.webp";
+import Section8 from "../assets/images/mobile-home/section-8.webp";
+import Section9 from "../assets/images/mobile-home/section-9.webp";
+import Section10 from "../assets/images/mobile-home/section-10.webp";
+import Section11 from "../assets/images/mobile-home/section-11.webp";
 
 const Landing: React.FC = () => {
   return (
@@ -179,6 +190,79 @@ const Landing: React.FC = () => {
           <div className="page-landing-mobile__header__hero-4">
             <img src={Hero4} alt="mobile-hero-0" />
           </div>
+        </div>
+        <div className="page-landing-mobile__section-1">
+          <img src={Section1} alt="page-landing-mobile-section-1" />
+          <div className="page-landing-mobile__section-1__title">
+            JOIN THE BATTLE
+          </div>
+          <div className="page-landing-mobile__section-1__text">
+            the battlepunks are a collection of 10,000 galactic hero nfts at the
+            heart of the battlepunk arena trading card game.<br/><br/> get your battlepunk
+            to gain early access to the game, as well as exclusive access to
+            drops, events, and other benefits within the battlepunk arena
+            ecosystem.
+          </div>
+          <div className="page-landing-mobile__section-1__mint-btn"></div>
+          <div className="page-landing-mobile__section-1__social-icons">
+            <div className="page-landing-mobile__section-1__social-icons__1"></div>
+            <div className="page-landing-mobile__section-1__social-icons__2"></div>
+            <div className="page-landing-mobile__section-1__social-icons__3"></div>
+            <div className="page-landing-mobile__section-1__social-icons__4"></div>
+            <div className="page-landing-mobile__section-1__social-icons__5"></div>
+          </div>
+        </div>
+
+        <div className="page-landing-mobile__section-2">
+          <img src={Section2} alt="page-landing-mobile-section-2" />
+          <div className="page-landing-mobile__section-2__text">
+            the battlepunks are a collection of 10,000 galactic hero nfts at the
+          </div>
+        </div>
+
+        <div className="page-landing-mobile__section-3">
+          <img src={Section3} alt="page-landing-mobile-section-3" />
+          <div className="page-landing-mobile__section-3__text">
+            the battlepunks are a collection of 10,000 galactic hero nfts at the
+          </div>
+        </div>
+        
+        <div className="page-landing-mobile__section-4">
+          <img src={Section4} alt="page-landing-mobile-section-4" />
+          <div className="page-landing-mobile__section-4__text">
+            the battlepunks are a collection of 10,000 galactic hero nfts at the
+          </div>
+        </div>
+
+        <div className="page-landing-mobile__section-5">
+          <img src={Section5} alt="page-landing-mobile-section-4" />
+          <div className="page-landing-mobile__section-5__scroll">
+            <img src={Scroll} alt="page-landing-mobile-section-5-scroll" />
+          </div>
+        </div>
+        
+        <div className="page-landing-mobile__section-6">
+          <img src={Section6} alt="page-landing-mobile-section-6" />
+        </div>
+
+        <div className="page-landing-mobile__section-7">
+          <img src={Section7} alt="page-landing-mobile-section-7" />
+        </div>
+
+        <div className="page-landing-mobile__section-8">
+          <img src={Section8} alt="page-landing-mobile-section-8" />
+        </div>
+
+        <div className="page-landing-mobile__section-9">
+          <img src={Section9} alt="page-landing-mobile-section-9" />
+        </div>
+
+        <div className="page-landing-mobile__section-10">
+          <img src={Section10} alt="page-landing-mobile-section-10" />
+        </div>
+
+        <div className="page-landing-mobile__section-11">
+          <img src={Section11} alt="page-landing-mobile-section-11" />
         </div>
       </div>
     </>

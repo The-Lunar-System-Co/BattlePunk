@@ -269,7 +269,7 @@
 .page-landing-mobile {
   display: none;
   background-image: url("../../assets/images/landing-page-bg.webp");
-  background-size: cover;
+  background-size: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
@@ -326,7 +326,6 @@
       }
     }
 
-    
     &__hero-1,
     &__hero-2,
     &__hero-3,
@@ -356,6 +355,184 @@
         -moz-transform: translateY(10px);
         transform: translateY(10px);
       }
+    }
+  }
+
+  &__section-1 {
+    position: relative;
+    color: white;
+    img {
+      width: 100%;
+    }
+
+    &__title {
+      position: absolute;
+      top: 16%;
+      bottom: 77%;
+      left: 10%;
+      right: 10%;
+      // background-color: #ff000050;
+      font-size: 28px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__text {
+      position: absolute;
+      top: 44%;
+      bottom: 25%;
+      left: 15%;
+      right: 15%;
+      // background-color: #ff000050;
+      font-size: 14px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+    }
+
+    &__mint-btn {
+      position: absolute;
+      top: 81%;
+      bottom: 13%;
+      left: 17%;
+      right: 17%;
+      // background-color: #ff000050;
+    }
+
+    &__social-icons {
+      position: absolute;
+      top: 90%;
+      bottom: 4%;
+      left: 15%;
+      right: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      div{
+        width: 15%;
+        height: 40px;
+        // background-color: red;
+      }
+    }
+  }
+
+  &__section-2{
+    position: relative;
+    img{
+      width: 100%;
+    }
+
+    &__text{
+      position: absolute;
+      top: 36%;
+      bottom: 46%;
+      left: 32%;
+      right: 32%;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  &__section-3{
+    position: relative;
+    img{
+      width: 100%;
+    }
+
+    &__text{
+      position: absolute;
+      top: 36%;
+      bottom: 46%;
+      left: 32%;
+      right: 32%;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  &__section-4{
+    position: relative;
+    img{
+      width: 100%;
+    }
+
+    &__text{
+      position: absolute;
+      top: 36%;
+      bottom: 46%;
+      left: 32%;
+      right: 32%;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  &__section-5{
+    position: relative;
+    img{
+      width: 100%;
+    }
+
+    &__scroll{
+      position: absolute;
+      top: 16%;
+      bottom: 12%;
+      left: 16%;
+      right: 16%;
+      color: white;
+      text-align: center;
+      overflow: scroll;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  &__section-6{
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+
+  &__section-7{
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+
+  &__section-8{
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+
+  &__section-9{
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+
+  &__section-10{
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+
+  &__section-11{
+    position: relative;
+    img{
+      width: 100%;
     }
   }
 }
