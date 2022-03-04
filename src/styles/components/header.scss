@@ -41,11 +41,6 @@
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    // border: 2px solid #8beffe;
-    // border-radius: 50px;
-    // width: 40px;
-    // height: 40px;
-    background-color: #110f23;
 
     &__bar {
       display: block;
@@ -54,7 +49,7 @@
       margin: 2px auto;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      background-color: #8beffe;
+      background-color: white;
     }
 
     @media only screen and (max-width: 1200px) {
