@@ -16,7 +16,7 @@ import {
   // NoEthereumProviderError
 } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
-import { formatEther } from "@ethersproject/units";
+import { formatEther, parseEther } from "@ethersproject/units";
 import { Contract } from "@ethersproject/contracts";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -106,7 +106,9 @@ const Mint = () => {
       );
 
       try {
-        const transaction = await BABPContract.mint(count);
+        const transaction = await BABPContract.mint(count, {
+          value: parseEther((parseFloat(price) * count).toString())
+        });
         const receipt = await transaction.wait();
         setTransactionPending(false);
         if (receipt.status) {

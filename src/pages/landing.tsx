@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 // components
 import HyperLink from "../components/hyper-link";
@@ -10,11 +11,7 @@ import Left2Hero from "../assets/images/landing-header-left-2.webp";
 import Right1Hero from "../assets/images/landing-header-right-1.webp";
 import Right2Hero from "../assets/images/landing-header-right-2.webp";
 
-import BodyBorder from "../assets/images/landing-page-body-border.webp";
-import Content1 from "../assets/images/landing-page-body-content-1.webp";
-import Content2 from "../assets/images/landing-page-body-content-2.webp";
-import Content3 from "../assets/images/landing-page-body-content-3.webp";
-import Content5 from "../assets/images/landing-page-body-content-5.webp";
+import Frame from "../assets/images/landing-page-body-frame.webp";
 import Scroll from "../assets/images/landing-page-body-content-3-scroll.png";
 import FooterBg from "../assets/images/punkon.png";
 
@@ -38,6 +35,8 @@ import Section11 from "../assets/images/mobile-home/section-11.webp";
 import PlayIcon from "../assets/images/mobile-home/play.png";
 
 const Landing: React.FC = () => {
+  const history = useHistory();
+
   return (
     <>
       <div className="page-landing">
@@ -74,43 +73,36 @@ const Landing: React.FC = () => {
         </div>
 
         <div className="page-landing__body">
-          <div className="page-landing__body__contents">
-            <div className="page-landing__body__contents__content-1">
-              <img src={Content1} alt="content-1" />
-              <div className="page-landing__body__contents__content-1__container">
-                <div className="page-landing__body__contents__content-1__container__social-group">
-                  <HyperLink
-                    href="https://discord.gg/battlepunkarena/"
-                    className="page-landing__body__contents__content-1__container__social-group__social-1"
-                  />
-                  <HyperLink
-                    href="https://www.instagram.com/battlepunkarena/"
-                    className="page-landing__body__contents__content-1__container__social-group__social-2"
-                  />
-                  <HyperLink
-                    href="https://twitter.com/BattlepunkNFT/"
-                    className="page-landing__body__contents__content-1__container__social-group__social-3"
-                  />
-                  <HyperLink
-                    href="https://opensea.io/"
-                    className="page-landing__body__contents__content-1__container__social-group__social-4"
-                  />
-                </div>
-              </div>
+          <div className="page-landing__body__section-1">
+            <div
+              className="page-landing__body__section-1__btn"
+              onClick={() => {
+                history.push("/mint");
+              }}
+            ></div>
+          </div>
+          <div className="page-landing__body__section-2">
+            <div className="page-landing__body__section-2__1">
+              the battlepunks are a collection of 10,000 galactic hero nfts at
+              the
             </div>
-            <div className="page-landing__body__contents__content-2">
-              <img src={Content2} alt="content-1" />
-              <div className="page-landing__body__contents__content-2__container">
-                <div>OVER 350 BREEDS OF GENESIS PUNKIES</div>
-                <div>EARN CRYPTO IN EPIC P2E BATTLES</div>
-                <div>BE THE FIRST TO DISCOVER NEW RARE BREEDS</div>
-              </div>
+            <div className="page-landing__body__section-2__2">
+              the battlepunks are a collection of 10,000 galactic hero nfts at
+              the
             </div>
-            <div className="page-landing__body__contents__content-3">
-              <img src={Content3} alt="content-1" />
+            <div className="page-landing__body__section-2__3">
+              the battlepunks are a collection of 10,000 galactic hero nfts at
+              the
             </div>
+          </div>
+          <div className="page-landing__body__section-3">
+            <div className="page-landing__body__section-3__scroll">
+              <img src={Scroll} alt="page-landing-body-section-3-scroll" />
+            </div>
+          </div>
+          <div className="page-landing__body__section-4">
             <video
-              className="page-landing__body__contents__content-4"
+              className="page-landing__body__section-4__video"
               autoPlay
               loop
               muted
@@ -122,17 +114,16 @@ const Landing: React.FC = () => {
                 type="video/mp4"
               />
             </video>
-            <div className="page-landing__body__contents__content-5">
-              <img src={Content5} alt="content-5" />
-              <div className="page-landing__body__contents__content-5__container">
-                <div className="">EXPLORE</div>
-                <div className="">COLLECT</div>
-                <div className="">BREED</div>
-                <div className="">BATTLE</div>
-              </div>
-            </div>
+          </div>
+          <div className="page-landing__body__section-5">
+            <div className="page-landing__body__section-5__1">EXPLORE</div>
+            <div className="page-landing__body__section-5__2">COLLECT</div>
+            <div className="page-landing__body__section-5__3">BREED</div>
+            <div className="page-landing__body__section-5__4">BATTLE</div>
+          </div>
+          <div className="page-landing__body__section-6">
             <video
-              className="page-landing__body__contents__content-6"
+              className="page-landing__body__section-6__video"
               autoPlay
               loop
               muted
@@ -143,13 +134,15 @@ const Landing: React.FC = () => {
                 type="video/mp4"
               />
             </video>
-            <div className="page-landing__body__contents__border">
-              <img src={BodyBorder} alt="content-1" />
-            </div>
-            <div className="page-landing__body__contents__scroll">
-              <img src={Scroll} alt="scroll" />
-            </div>
           </div>
+          <div className="page-landing__body__section-bg">
+            <img src={Frame} alt="page-landing__body__frame" />
+          </div>
+          <img
+            className="page-landing__body__bg"
+            src={Frame}
+            alt="page-landing__body__frame"
+          />
         </div>
         <div className="footer">
           <img className="footer__bg" src={FooterBg} alt="footer__bg" />
@@ -205,7 +198,12 @@ const Landing: React.FC = () => {
             as exclusive access to drops, events, and other benefits within the
             battlepunk arena ecosystem.
           </div>
-          <div className="page-landing-mobile__section-1__mint-btn"></div>
+          <div
+            className="page-landing-mobile__section-1__mint-btn"
+            onClick={() => {
+              history.push("/mint");
+            }}
+          ></div>
           <div className="page-landing-mobile__section-1__social-icons">
             <div className="page-landing-mobile__section-1__social-icons__1"></div>
             <div className="page-landing-mobile__section-1__social-icons__2"></div>
