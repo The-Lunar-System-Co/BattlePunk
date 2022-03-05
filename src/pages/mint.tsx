@@ -261,7 +261,7 @@ const Mint = () => {
           Sale Not Active
         </div>
         <div className="page-mint__desktop__container__footer-center-2">
-          {active ? "CONNECT TO THE ETHEREUM" : "---"}
+          {active ? "CONNECTED TO ETHEREUM" : "---"}
         </div>
         <div className="page-mint__desktop__container__footer-center-3">
           SOLD {totalSupply}/{maxSupply}
@@ -335,10 +335,10 @@ const Mint = () => {
         </div>
         <div className="page-mint__mobile__container__gif__mask"></div>
         <div className="page-mint__mobile__container__premium-sale">
-          PREMIUM SALE
+          Sale Not Active.
         </div>
         <div className="page-mint__mobile__container__connected-to-ethereum">
-          {active ? "CONNECT TO THE ETHEREUM" : "---"}
+          {active ? "CONNECTED TO ETHEREUM" : "---"}
         </div>
         <div className="page-mint__mobile__container__price">
           {active ? `${parseFloat(price) * count} ETH` : "--- ETH"}
