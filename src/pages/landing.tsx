@@ -83,16 +83,14 @@ const Landing: React.FC = () => {
           </div>
           <div className="page-landing__body__section-2">
             <div className="page-landing__body__section-2__1">
-              the battlepunks are a collection of 10,000 galactic hero nfts at
+            Over 350 Breeds of Genesis Punkies!
               the
             </div>
             <div className="page-landing__body__section-2__2">
-              the battlepunks are a collection of 10,000 galactic hero nfts at
-              the
+            Earn Crypto in Epic P2E Battles!
             </div>
             <div className="page-landing__body__section-2__3">
-              the battlepunks are a collection of 10,000 galactic hero nfts at
-              the
+            Be the first to discover new rare breeds!
             </div>
           </div>
           <div className="page-landing__body__section-3">
