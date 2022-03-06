@@ -83,16 +83,14 @@ const Landing: React.FC = () => {
           </div>
           <div className="page-landing__body__section-2">
             <div className="page-landing__body__section-2__1">
-              the battlepunks are a collection of 10,000 galactic hero nfts at
+            Over 350 Breeds of Genesis Punkies!
               the
             </div>
             <div className="page-landing__body__section-2__2">
-              the battlepunks are a collection of 10,000 galactic hero nfts at
-              the
+            Earn Crypto in Epic P2E Battles!
             </div>
             <div className="page-landing__body__section-2__3">
-              the battlepunks are a collection of 10,000 galactic hero nfts at
-              the
+            Be the first to discover new rare breeds!
             </div>
           </div>
           <div className="page-landing__body__section-3">
@@ -156,11 +154,11 @@ const Landing: React.FC = () => {
               className="footer__social-icons__social-2"
             />
             <HyperLink
-              href="https://twitter.com/BattlepunkNFT/"
+              href="https://twitter.com/BattlepunkTCG/"
               className="footer__social-icons__social-3"
             />
             <HyperLink
-              href="https://opensea.io/"
+              href="https://opensea.io/collection/battlepunk-arena-battlepunk"
               className="footer__social-icons__social-4"
             />
           </div>
@@ -216,21 +214,21 @@ const Landing: React.FC = () => {
         <div className="page-landing-mobile__section-2">
           <img src={Section2} alt="page-landing-mobile-section-2" />
           <div className="page-landing-mobile__section-2__text">
-            the battlepunks are a collection of 10,000 galactic hero nfts at the
+          Over 350 Breeds of Genesis Punkies!
           </div>
         </div>
 
         <div className="page-landing-mobile__section-3">
           <img src={Section3} alt="page-landing-mobile-section-3" />
           <div className="page-landing-mobile__section-3__text">
-            the battlepunks are a collection of 10,000 galactic hero nfts at the
+          Earn Crypto in Epic P2E Battles.
           </div>
         </div>
 
         <div className="page-landing-mobile__section-4">
           <img src={Section4} alt="page-landing-mobile-section-4" />
           <div className="page-landing-mobile__section-4__text">
-            the battlepunks are a collection of 10,000 galactic hero nfts at the
+          Be the first to discover new rare breeds!
           </div>
         </div>
 
