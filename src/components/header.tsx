@@ -28,7 +28,12 @@ const Header = () => {
         <DesktopNavItem to="/" tooltip="Coming Very Soon">
           Punkon
         </DesktopNavItem>
-        <DesktopNavItem to="/">BattlePaper</DesktopNavItem>
+        <DesktopNavItem
+          to="https://s3.eu-central-1.amazonaws.com/lunarsystem.co/Battlepaper.pdf"
+          isHyperLink
+        >
+          BattlePaper
+        </DesktopNavItem>
         <DesktopNavItem to="/" tooltip="Coming Soon">
           FAQ
         </DesktopNavItem>
@@ -87,7 +92,11 @@ const Header = () => {
         >
           Punkon
         </MobileNavItem>
-        <MobileNavItem to="/" setIsMobileDropDownOpen={setIsMobileDropDownOpen}>
+        <MobileNavItem
+          to="https://s3.eu-central-1.amazonaws.com/lunarsystem.co/Battlepaper.pdf"
+          isHyperLink
+          setIsMobileDropDownOpen={setIsMobileDropDownOpen}
+        >
           BattlePaper
         </MobileNavItem>
         <MobileNavItem
@@ -120,4 +129,4 @@ const Header = () => {
   );
 };
 
-export default (Header);
+export default Header;
