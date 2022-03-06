@@ -84,13 +84,12 @@ const Landing: React.FC = () => {
           <div className="page-landing__body__section-2">
             <div className="page-landing__body__section-2__1">
             Over 350 Breeds of Genesis Punkies!
-              the
             </div>
             <div className="page-landing__body__section-2__2">
             Earn Crypto in Epic P2E Battles!
             </div>
             <div className="page-landing__body__section-2__3">
-            Be the first to discover new rare breeds!
+          Trade rare Punkies and cards in the Arena Marketplace!
             </div>
           </div>
           <div className="page-landing__body__section-3">
@@ -228,7 +227,7 @@ const Landing: React.FC = () => {
         <div className="page-landing-mobile__section-4">
           <img src={Section4} alt="page-landing-mobile-section-4" />
           <div className="page-landing-mobile__section-4__text">
-          Be the first to discover new rare breeds!
+          Trade rare Punkies and cards in the Arena Marketplace!
           </div>
         </div>
 
