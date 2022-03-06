@@ -5,30 +5,45 @@ interface IMobileNavItem {
   isComingSoon?: boolean;
   to: string;
   setIsMobileDropDownOpen: (isMobileDropDownOpen: boolean) => void;
+  isHyperLink?: boolean;
 }
 
 const MobileNavItem: React.FC<IMobileNavItem> = ({
   isComingSoon,
   to,
   children,
-  setIsMobileDropDownOpen
+  setIsMobileDropDownOpen,
+  isHyperLink
 }) => {
   const history = useHistory();
   return (
-    <div
-      className="component-mobile-nav-item"
-      onClick={() => {
-        history.push(to);
-        setIsMobileDropDownOpen(false);
-      }}
-    >
-      <div className="component-mobile-nav-item__title">{children}</div>
-      {isComingSoon && (
-        <div className="component-mobile-nav-item__coming-soon">
-          Coming soon
+    <>
+      {isHyperLink ? (
+        <a className="component-mobile-nav-item" href={to} target="_blank">
+          <div className="component-mobile-nav-item__title">{children}</div>
+          {isComingSoon && (
+            <div className="component-mobile-nav-item__coming-soon">
+              Coming soon
+            </div>
+          )}
+        </a>
+      ) : (
+        <div
+          className="component-mobile-nav-item"
+          onClick={() => {
+            history.push(to);
+            setIsMobileDropDownOpen(false);
+          }}
+        >
+          <div className="component-mobile-nav-item__title">{children}</div>
+          {isComingSoon && (
+            <div className="component-mobile-nav-item__coming-soon">
+              Coming soon
+            </div>
+          )}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
