@@ -137,11 +137,11 @@ const LSD = () => {
             className="footer__social-icons__social-2"
           />
           <HyperLink
-            href="https://twitter.com/BattlepunkTCG/"
+            href="https://twitter.com/BattlepunkNFT/"
             className="footer__social-icons__social-3"
           />
           <HyperLink
-            href="https://opensea.io/collection/battlepunk-arena-battlepunk"
+            href="https://opensea.io/"
             className="footer__social-icons__social-4"
           />
         </div>
