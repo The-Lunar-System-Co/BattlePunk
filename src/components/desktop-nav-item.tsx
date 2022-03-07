@@ -17,10 +17,14 @@ const DesktopNavItem: React.FC<IDesktopNavItem> = ({
   return (
     <>
       {isHyperLink ? (
-        <a className="component-desktop-nav-item" href={to} target="_blank">
+        <a
+          className="component-desktop-nav-item"
+          href={to}
+          target="_blank"
+          rel="noreferrer"
+        >
           {children}
           {tooltip && <div className="tooltip">{tooltip}</div>}
-          
         </a>
       ) : (
         <div

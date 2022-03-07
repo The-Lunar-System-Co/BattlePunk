@@ -19,7 +19,12 @@ const MobileNavItem: React.FC<IMobileNavItem> = ({
   return (
     <>
       {isHyperLink ? (
-        <a className="component-mobile-nav-item" href={to} target="_blank">
+        <a
+          className="component-mobile-nav-item"
+          href={to}
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="component-mobile-nav-item__title">{children}</div>
           {isComingSoon && (
             <div className="component-mobile-nav-item__coming-soon">

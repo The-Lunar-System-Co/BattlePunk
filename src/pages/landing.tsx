@@ -217,18 +217,31 @@ const Landing: React.FC = () => {
             MINT NOW
           </div>
           <div className="page-landing-mobile__section-1__social-icons">
-            <a href="https://discord.gg/battlepunkarena" target="_blank">
+            <a
+              href="https://discord.gg/battlepunkarena"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={DiscordIcon} alt="telegram" />
             </a>
-            <a href="https://www.instagram.com/battlepunkarena" target="_blank">
+            <a
+              href="https://www.instagram.com/battlepunkarena"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={InstagramIcon} alt="telegram" />
             </a>
-            <a href="https://twitter.com/BattlepunkTCG" target="_blank">
+            <a
+              href="https://twitter.com/BattlepunkTCG"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={TwitterIcon} alt="telegram" />
             </a>
             <a
               href="https://opensea.io/collection/battlepunk-arena-battlepunk"
               target="_blank"
+              rel="noreferrer"
             >
               <img src={TelegramIcon} alt="telegram" />
             </a>
