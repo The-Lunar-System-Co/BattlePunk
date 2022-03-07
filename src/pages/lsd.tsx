@@ -30,19 +30,25 @@ const LSD = () => {
                 href="https://t.me/TheLunarSystem"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
+              >
+                <div></div>
+              </a>
               <a
                 className="page-lsd__header__panel__container__link-2"
                 href="mailto:privatesale@lunarsystem.co"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
+              >
+                <div></div>
+              </a>
               <a
                 className="page-lsd__header__panel__container__link-3"
-                href="https://s3.eu-central-1.amazonaws.com/lunarsystem.co/Battlepaper.pdf"
+                href="https://info-140.gitbook.io/lunar-system-dollar-whitepaper/"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
+              >
+                <div></div>
+              </a>
             </div>
           </div>
 
