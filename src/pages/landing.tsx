@@ -96,7 +96,7 @@ const Landing: React.FC = () => {
               Earn Crypto in Epic P2E Battles!
             </div>
             <div className="page-landing__body__section-2__3">
-              Be the first to discover new rare breeds!
+              Trade rare Punkies and cards in the Arena Marketplace!
             </div>
           </div>
           <div className="page-landing__body__section-3">
@@ -217,18 +217,31 @@ const Landing: React.FC = () => {
             MINT NOW
           </div>
           <div className="page-landing-mobile__section-1__social-icons">
-            <a href="https://discord.gg/battlepunkarena" target="_blank">
+            <a
+              href="https://discord.gg/battlepunkarena"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={DiscordIcon} alt="telegram" />
             </a>
-            <a href="https://www.instagram.com/battlepunkarena" target="_blank">
+            <a
+              href="https://www.instagram.com/battlepunkarena"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={InstagramIcon} alt="telegram" />
             </a>
-            <a href="https://twitter.com/BattlepunkTCG" target="_blank">
+            <a
+              href="https://twitter.com/BattlepunkTCG"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={TwitterIcon} alt="telegram" />
             </a>
             <a
               href="https://opensea.io/collection/battlepunk-arena-battlepunk"
               target="_blank"
+              rel="noreferrer"
             >
               <img src={TelegramIcon} alt="telegram" />
             </a>
@@ -252,7 +265,7 @@ const Landing: React.FC = () => {
         <div className="page-landing-mobile__section-4">
           <img src={Section4} alt="page-landing-mobile-section-4" />
           <div className="page-landing-mobile__section-4__text">
-            Be the first to discover new rare breeds!
+            Trade rare Punkies and cards in the Arena Marketplace!
           </div>
         </div>
 
