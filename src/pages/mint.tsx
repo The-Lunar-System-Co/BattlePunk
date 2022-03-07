@@ -245,28 +245,36 @@ const Mint = () => {
 
         <div className="page-mint__desktop__container__footer-left">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div>PREVIOUS SALE</div>
 =======
           <div>PRESALE</div>
 >>>>>>> parent of 2be8bb1e (merged incoming change)
+=======
+          <div>PREVIOUSE SALE</div>
+>>>>>>> parent of 9f749433 (Update mint.tsx)
           <div>SOLD</div>
-          <div>1123/1123</div>
+          <div>1000/1000</div>
           <div>PRICE</div>
           <div>0.1ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-right">
           <div>NEXT SALE</div>
           <div>SOLD</div>
-          <div>0/8877</div>
+          <div>0/300</div>
           <div>PRICE</div>
           <div>0.3ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-center-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
           SALE NOT ACTIVE
 =======
           Sale Not Active
 >>>>>>> parent of 2be8bb1e (merged incoming change)
+=======
+          MINT YOUR BATTLER
+>>>>>>> parent of 9f749433 (Update mint.tsx)
         </div>
         <div className="page-mint__desktop__container__footer-center-2">
           {active ? "CONNECTED TO ETHEREUM" : "---"}
@@ -344,10 +352,14 @@ const Mint = () => {
         <div className="page-mint__mobile__container__gif__mask"></div>
         <div className="page-mint__mobile__container__premium-sale">
 <<<<<<< HEAD
+<<<<<<< HEAD
           SALE NOT ACTIVE
 =======
           Sale Not Active.
 >>>>>>> parent of 2be8bb1e (merged incoming change)
+=======
+          PREMIUM SALE
+>>>>>>> parent of 9f749433 (Update mint.tsx)
         </div>
         <div className="page-mint__mobile__container__connected-to-ethereum">
           {active ? "CONNECTED TO ETHEREUM" : "---"}
