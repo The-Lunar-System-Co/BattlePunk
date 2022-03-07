@@ -16,7 +16,12 @@
   right: 0px;
   z-index: 100;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1000px) {
+    height: 90px;
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 600px) {
     height: 90px;
     background-image: url("../../assets/images/header-mobile-bg.png");
   }
@@ -89,7 +94,7 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    &__logo{
+    &__logo {
       font-size: 32px;
       margin-bottom: 25px;
       margin-top: 25px;

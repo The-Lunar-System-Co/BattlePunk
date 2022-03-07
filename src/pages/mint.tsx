@@ -244,7 +244,11 @@ const Mint = () => {
         </div>
 
         <div className="page-mint__desktop__container__footer-left">
+<<<<<<< HEAD
           <div>PREVIOUS SALE</div>
+=======
+          <div>PRESALE</div>
+>>>>>>> parent of 2be8bb1e (merged incoming change)
           <div>SOLD</div>
           <div>1123/1123</div>
           <div>PRICE</div>
@@ -258,10 +262,14 @@ const Mint = () => {
           <div>0.3ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-center-1">
+<<<<<<< HEAD
           SALE NOT ACTIVE
+=======
+          Sale Not Active
+>>>>>>> parent of 2be8bb1e (merged incoming change)
         </div>
         <div className="page-mint__desktop__container__footer-center-2">
-          {active ? "CONNECT TO THE ETHEREUM" : "---"}
+          {active ? "CONNECTED TO ETHEREUM" : "---"}
         </div>
         <div className="page-mint__desktop__container__footer-center-3">
           SOLD {totalSupply}/{maxSupply}
@@ -335,10 +343,14 @@ const Mint = () => {
         </div>
         <div className="page-mint__mobile__container__gif__mask"></div>
         <div className="page-mint__mobile__container__premium-sale">
+<<<<<<< HEAD
           SALE NOT ACTIVE
+=======
+          Sale Not Active.
+>>>>>>> parent of 2be8bb1e (merged incoming change)
         </div>
         <div className="page-mint__mobile__container__connected-to-ethereum">
-          {active ? "CONNECT TO THE ETHEREUM" : "---"}
+          {active ? "CONNECTED TO ETHEREUM" : "---"}
         </div>
         <div className="page-mint__mobile__container__price">
           {active ? `${parseFloat(price) * count} ETH` : "--- ETH"}
