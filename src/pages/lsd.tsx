@@ -25,6 +25,24 @@ const LSD = () => {
               <div className="page-lsd__header__panel__container__text">
                 The ERC-20 token at the heart of the Lunar Ecosystem.
               </div>
+              <a
+                className="page-lsd__header__panel__container__link-1"
+                href="https://t.me/TheLunarSystem"
+                target="_blank"
+                rel="noreferrer"
+              ></a>
+              <a
+                className="page-lsd__header__panel__container__link-2"
+                href="mailto:privatesale@lunarsystem.co"
+                target="_blank"
+                rel="noreferrer"
+              ></a>
+              <a
+                className="page-lsd__header__panel__container__link-3"
+                href="https://s3.eu-central-1.amazonaws.com/lunarsystem.co/Battlepaper.pdf"
+                target="_blank"
+                rel="noreferrer"
+              ></a>
             </div>
           </div>
 
@@ -34,7 +52,11 @@ const LSD = () => {
         </div>
 
         <div className="page-lsd__body">
-          <img className="page-lsd__body__bg" src={HoloImage} alt="page-lsd-body" />
+          <img
+            className="page-lsd__body__bg"
+            src={HoloImage}
+            alt="page-lsd-body"
+          />
           <div className="page-lsd__body__container">
             <div className="page-lsd__body__container__1">
               <div className="page-lsd__body__container__1__left">
