@@ -81,12 +81,61 @@ const Landing: React.FC = () => {
 
         <div className="page-landing__body">
           <div className="page-landing__body__section-1">
+            <div className="page-landing__body__section-1__avatar">
+              <img
+                src={Section1Avatar}
+                alt="page-landing-body-section-1-avatar"
+              />
+            </div>
+            <div className="page-landing__body__section-1__title">
+              JOIN THE BATTLE
+            </div>
+            <div className="page-landing__body__section-1__text">
+              the battlepunks are a collection of 10,000 galactic hero nfts at
+              the heart of the battlepunk arena trading card game.
+              <br />
+              <br /> get your battlepunk to gain early access to the game, as
+              well as exclusive access to drops, events, and other benefits
+              within the battlepunk arena ecosystem.
+            </div>
             <div
-              className="page-landing__body__section-1__btn"
+              className="page-landing__body__section-1__mint-btn"
               onClick={() => {
                 history.push("/mint");
               }}
-            ></div>
+            >
+              MINT NOW
+            </div>
+            <div className="page-landing__body__section-1__social-icons">
+              <a
+                href="https://discord.gg/battlepunkarena"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={DiscordIcon} alt="telegram" />
+              </a>
+              <a
+                href="https://www.instagram.com/battlepunkarena"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={InstagramIcon} alt="telegram" />
+              </a>
+              <a
+                href="https://twitter.com/BattlepunkTCG"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={TwitterIcon} alt="telegram" />
+              </a>
+              <a
+                href="https://opensea.io/collection/battlepunk-arena-battlepunk"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={TelegramIcon} alt="telegram" />
+              </a>
+            </div>
           </div>
           <div className="page-landing__body__section-2">
             <div className="page-landing__body__section-2__1">
