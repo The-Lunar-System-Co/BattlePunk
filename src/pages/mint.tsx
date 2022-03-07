@@ -244,21 +244,21 @@ const Mint = () => {
         </div>
 
         <div className="page-mint__desktop__container__footer-left">
-          <div>PREVIOUSE SALE</div>
+          <div>PREVIOUS SALE</div>
           <div>SOLD</div>
-          <div>1000/1000</div>
+          <div>1123/1123</div>
           <div>PRICE</div>
           <div>0.1ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-right">
           <div>NEXT SALE</div>
           <div>SOLD</div>
-          <div>0/300</div>
+          <div>0/8877</div>
           <div>PRICE</div>
           <div>0.3ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-center-1">
-          MINT YOUR BATTLER
+          SALE NOT ACTIVE
         </div>
         <div className="page-mint__desktop__container__footer-center-2">
           {active ? "CONNECT TO THE ETHEREUM" : "---"}
@@ -335,7 +335,7 @@ const Mint = () => {
         </div>
         <div className="page-mint__mobile__container__gif__mask"></div>
         <div className="page-mint__mobile__container__premium-sale">
-          PREMIUM SALE
+          SALE NOT ACTIVE
         </div>
         <div className="page-mint__mobile__container__connected-to-ethereum">
           {active ? "CONNECT TO THE ETHEREUM" : "---"}
