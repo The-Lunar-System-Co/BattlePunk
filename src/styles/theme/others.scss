@@ -37,30 +37,28 @@ video {
     align-items: center;
 
     a {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
       background-size: contain;
       background-repeat: no-repeat;
+      border-radius: 50%;
+      // box-shadow: 0px 0px 10px #85f5fd;
     }
 
     &__social-1 {
-      background-image: url("../../assets/images/social-1.png");
+      background-image: url("../../assets/images/icon-discord.png");
     }
 
     &__social-2 {
-      background-image: url("../../assets/images/social-2.png");
+      background-image: url("../../assets/images/icon-instagram.png");
     }
 
     &__social-3 {
-      background-image: url("../../assets/images/social-3.png");
+      background-image: url("../../assets/images/icon-twitter.png");
     }
 
     &__social-4 {
-      background-image: url("../../assets/images/social-4.png");
-    }
-
-    &__social-5 {
-      background-image: url("../../assets/images/social-4.png");
+      background-image: url("../../assets/images/icon-telegram.png");
     }
   }
 }

@@ -22,6 +22,7 @@ import Hero2 from "../assets/images/mobile-home/hero-2.webp";
 import Hero3 from "../assets/images/mobile-home/hero-3.webp";
 import Hero4 from "../assets/images/mobile-home/hero-4.webp";
 import Section1 from "../assets/images/mobile-home/section-1.webp";
+import Section1Avatar from "../assets/images/mobile-home/section-1-avatar.png";
 import Section2 from "../assets/images/mobile-home/section-2.webp";
 import Section3 from "../assets/images/mobile-home/section-3.webp";
 import Section4 from "../assets/images/mobile-home/section-4.webp";
@@ -33,6 +34,12 @@ import Section9 from "../assets/images/mobile-home/section-9.webp";
 import Section10 from "../assets/images/mobile-home/section-10.webp";
 import Section11 from "../assets/images/mobile-home/section-11.webp";
 import PlayIcon from "../assets/images/mobile-home/play.png";
+
+// social-icons
+import TelegramIcon from "../assets/images/icon-telegram.png";
+import InstagramIcon from "../assets/images/icon-instagram.png";
+import DiscordIcon from "../assets/images/icon-discord.png";
+import TwitterIcon from "../assets/images/icon-twitter.png";
 
 const Landing: React.FC = () => {
   const history = useHistory();
@@ -83,14 +90,13 @@ const Landing: React.FC = () => {
           </div>
           <div className="page-landing__body__section-2">
             <div className="page-landing__body__section-2__1">
-            Over 350 Breeds of Genesis Punkies!
-              the
+              Over 350 Breeds of Genesis Punkies!
             </div>
             <div className="page-landing__body__section-2__2">
-            Earn Crypto in Epic P2E Battles!
+              Earn Crypto in Epic P2E Battles!
             </div>
             <div className="page-landing__body__section-2__3">
-            Be the first to discover new rare breeds!
+              Be the first to discover new rare breeds!
             </div>
           </div>
           <div className="page-landing__body__section-3">
@@ -150,11 +156,11 @@ const Landing: React.FC = () => {
               className="footer__social-icons__social-1"
             />
             <HyperLink
-              href="https://www.instagram.com/battlepunkarena/"
+              href="https://www.instagram.com/battlepunkarena"
               className="footer__social-icons__social-2"
             />
             <HyperLink
-              href="https://twitter.com/BattlepunkTCG/"
+              href="https://twitter.com/BattlepunkTCG"
               className="footer__social-icons__social-3"
             />
             <HyperLink
@@ -188,6 +194,12 @@ const Landing: React.FC = () => {
           <div className="page-landing-mobile__section-1__title">
             JOIN THE BATTLE
           </div>
+          <div className="page-landing-mobile__section-1__avatar">
+            <img
+              src={Section1Avatar}
+              alt="page-landing-mobile-section-1-avatar"
+            />
+          </div>
           <div className="page-landing-mobile__section-1__text">
             the battlepunks are a collection of 10,000 galactic hero nfts at the
             heart of the battlepunk arena trading card game.
@@ -201,34 +213,46 @@ const Landing: React.FC = () => {
             onClick={() => {
               history.push("/mint");
             }}
-          ></div>
+          >
+            MINT NOW
+          </div>
           <div className="page-landing-mobile__section-1__social-icons">
-            <div className="page-landing-mobile__section-1__social-icons__1"></div>
-            <div className="page-landing-mobile__section-1__social-icons__2"></div>
-            <div className="page-landing-mobile__section-1__social-icons__3"></div>
-            <div className="page-landing-mobile__section-1__social-icons__4"></div>
-            <div className="page-landing-mobile__section-1__social-icons__5"></div>
+            <a href="https://discord.gg/battlepunkarena" target="_blank">
+              <img src={DiscordIcon} alt="telegram" />
+            </a>
+            <a href="https://www.instagram.com/battlepunkarena" target="_blank">
+              <img src={InstagramIcon} alt="telegram" />
+            </a>
+            <a href="https://twitter.com/BattlepunkTCG" target="_blank">
+              <img src={TwitterIcon} alt="telegram" />
+            </a>
+            <a
+              href="https://opensea.io/collection/battlepunk-arena-battlepunk"
+              target="_blank"
+            >
+              <img src={TelegramIcon} alt="telegram" />
+            </a>
           </div>
         </div>
 
         <div className="page-landing-mobile__section-2">
           <img src={Section2} alt="page-landing-mobile-section-2" />
           <div className="page-landing-mobile__section-2__text">
-          Over 350 Breeds of Genesis Punkies!
+            Over 350 Breeds of Genesis Punkies!
           </div>
         </div>
 
         <div className="page-landing-mobile__section-3">
           <img src={Section3} alt="page-landing-mobile-section-3" />
           <div className="page-landing-mobile__section-3__text">
-          Earn Crypto in Epic P2E Battles.
+            Earn Crypto in Epic P2E Battles.
           </div>
         </div>
 
         <div className="page-landing-mobile__section-4">
           <img src={Section4} alt="page-landing-mobile-section-4" />
           <div className="page-landing-mobile__section-4__text">
-          Be the first to discover new rare breeds!
+            Be the first to discover new rare breeds!
           </div>
         </div>
 

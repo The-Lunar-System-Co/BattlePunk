@@ -139,6 +139,8 @@
       color: white;
       font-size: 12px;
       text-align: center;
+      text-shadow: 0px 0px 4px black;
+      // -webkit-text-stroke: 0.5px black; /* width and color */
 
       &__1,
       &__2,
@@ -429,6 +431,19 @@
       justify-content: center;
     }
 
+    &__avatar {
+      position: absolute;
+      top: 26%;
+      bottom: 57%;
+      left: 30%;
+      right: 30%;
+      background-color: #ff000050;
+
+      img {
+        width: 100%;
+      }
+    }
+
     &__text {
       position: absolute;
       top: 44%;
@@ -447,10 +462,19 @@
     &__mint-btn {
       position: absolute;
       top: 81%;
-      bottom: 13%;
+      bottom: 11%;
       left: 17%;
       right: 17%;
-      // background-color: #ff000050;
+      background-image: url("../../assets/images/mobile-home/mint-now.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3863a0;
+      font-size: 24px;
+      padding-top: 2%;
     }
 
     &__social-icons {
@@ -463,10 +487,16 @@
       align-items: center;
       justify-content: space-between;
 
-      div {
-        width: 15%;
+      a {
+        width: 40px;
         height: 40px;
-        // background-color: red;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          box-shadow: 0px 0px 10px #85f5fd;
+        }
       }
     }
   }
@@ -488,6 +518,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-shadow: 0px 0px 4px black;
     }
   }
 
@@ -508,6 +539,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-shadow: 0px 0px 4px black;
     }
   }
 
@@ -528,6 +560,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-shadow: 0px 0px 4px black;
     }
   }
 
