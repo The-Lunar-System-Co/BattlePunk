@@ -37,6 +37,7 @@ import PlayIcon from "../assets/images/mobile-home/play.png";
 
 // social-icons
 import TelegramIcon from "../assets/images/icon-telegram.png";
+import OpenseaIcon from "../assets/images/icon-opensea.png";
 import InstagramIcon from "../assets/images/icon-instagram.png";
 import DiscordIcon from "../assets/images/icon-discord.png";
 import TwitterIcon from "../assets/images/icon-twitter.png";
@@ -133,7 +134,7 @@ const Landing: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={TelegramIcon} alt="telegram" />
+                <img src={OpenseaIcon} alt="opensea" />
               </a>
             </div>
           </div>
@@ -288,7 +289,7 @@ const Landing: React.FC = () => {
               <img src={TwitterIcon} alt="telegram" />
             </a>
             <a
-              href="https://opensea.io/collection/battlepunk-arena-battlepunk"
+              href="https://raritysniper.com/nft-drops-calendar"
               target="_blank"
               rel="noreferrer"
             >
