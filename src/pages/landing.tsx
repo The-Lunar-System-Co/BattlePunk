@@ -113,21 +113,21 @@ const Landing: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={DiscordIcon} alt="telegram" />
+                <img src={DiscordIcon} alt="discord" />
               </a>
               <a
                 href="https://www.instagram.com/battlepunkarena"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={InstagramIcon} alt="telegram" />
+                <img src={InstagramIcon} alt="instagram" />
               </a>
               <a
                 href="https://twitter.com/BattlepunkTCG"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={TwitterIcon} alt="telegram" />
+                <img src={TwitterIcon} alt="twitter" />
               </a>
               <a
                 href="https://opensea.io/collection/battlepunk-arena-battlepunk"
@@ -272,21 +272,21 @@ const Landing: React.FC = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={DiscordIcon} alt="telegram" />
+              <img src={DiscordIcon} alt="discord" />
             </a>
             <a
               href="https://www.instagram.com/battlepunkarena"
               target="_blank"
               rel="noreferrer"
             >
-              <img src={InstagramIcon} alt="telegram" />
+              <img src={InstagramIcon} alt="instagram" />
             </a>
             <a
               href="https://twitter.com/BattlepunkTCG"
               target="_blank"
               rel="noreferrer"
             >
-              <img src={TwitterIcon} alt="telegram" />
+              <img src={TwitterIcon} alt="twitter" />
             </a>
             <a
               href="https://raritysniper.com/nft-drops-calendar"
