@@ -130,7 +130,7 @@ const Landing: React.FC = () => {
                 <img src={TwitterIcon} alt="twitter" />
               </a>
               <a
-                href="https://opensea.io/collection/battlepunk-arena-battlepunk"
+                href="#"
                 target="_blank"
                 rel="noreferrer"
               >
