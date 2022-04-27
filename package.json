@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@ethersproject/contracts": "^5.5.0",
+    "@ethersproject/keccak256": "^5.6.0",
     "@ethersproject/providers": "^5.5.3",
     "@ethersproject/solidity": "^5.5.0",
     "@ethersproject/units": "^5.5.0",
@@ -16,6 +17,7 @@
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "@web3-react/walletconnect-connector": "^7.0.2-alpha.0",
+    "merkletreejs": "^0.2.31",
     "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

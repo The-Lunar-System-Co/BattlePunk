@@ -130,7 +130,8 @@ const Landing: React.FC = () => {
                 <img src={TwitterIcon} alt="twitter" />
               </a>
               <a
-                href="#"
+                href="https://opensea.com"
+                // href="#"
                 target="_blank"
                 rel="noreferrer"
               >

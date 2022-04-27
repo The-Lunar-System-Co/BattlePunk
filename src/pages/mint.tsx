@@ -21,10 +21,18 @@ import { Contract } from "@ethersproject/contracts";
 import { ToastContainer, toast } from "react-toastify";
 
 // abis
-import BABPABI from "../abis/battlepunk.json";
+import BattlePunkPresaleABI from "../abis/battlepunk-presale.json";
+
+// merkleTree functions
+import {
+  getMerklePremiumProof,
+  getMerkleBasicProof,
+  getMerklePremiumRoot,
+  getMerkleBasicRoot
+} from "../merkletree";
 
 // variables
-const BABPAddress = "0x68087a38a8eEAf7c614b634eD50837de71069d47";
+const BattlePunkPresaleAddress = "0x4AEfF2921DE7ea2E404F23B1565AcF25f93f9525";
 const transactionSuccessText = "Transaction Success";
 const transactionFailText = "Transaction Fail";
 const transactionRejectText = "Transaction Reject";
@@ -49,7 +57,7 @@ const Mint = () => {
 
   const connectMetamask = () => {
     const injectedConnector = new InjectedConnector({
-      supportedChainIds: [1]
+      supportedChainIds: [4]
     });
     // activate(injectedConnector, err => {
     //   console.log("metamaskConnectErr", err);
@@ -65,10 +73,11 @@ const Mint = () => {
 
   const connectWalletConnect = () => {
     const RPC_URLS = {
-      1: "https://mainnet.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7"
+      // 1: "https://mainnet.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7",
+      4: "https://rinkeby.infura.io/v3/407161c0da4c4f1b81f3cc87ca8310a7"
     };
     const walletConnectConnector = new WalletConnectConnector({
-      rpc: { 1: RPC_URLS[1] },
+      rpc: { 4: RPC_URLS[4] },
       bridge: "https://bridge.walletconnect.org",
       qrcode: true,
       // @ts-ignore
@@ -97,22 +106,40 @@ const Mint = () => {
     }
   };
 
-  const mint = async () => {
-    if (getMintButtonEnabled()) {
-      const BABPContract = new Contract(
-        BABPAddress,
-        BABPABI,
+  const deposit = async () => {
+    if (getDepositButtonEnabled()) {
+      const BattlePunkPresaleContract = new Contract(
+        BattlePunkPresaleAddress,
+        BattlePunkPresaleABI,
         library.getSigner()
       );
 
       try {
-        const transaction = await BABPContract.mint(count, {
-          value: parseEther((parseFloat(price) * count).toString())
-        });
+        let merkleProof;
+
+        if (tier === 2) {
+          merkleProof = getMerklePremiumProof(account);
+        } else if (tier === 1) {
+          merkleProof = getMerkleBasicProof(account);
+        } else {
+          merkleProof = "";
+        }
+
+        console.log('merkleProof', merkleProof);
+
+        const transaction = await BattlePunkPresaleContract.deposit(
+          merkleProof,
+          {
+            value: parseEther((parseFloat(price) * count).toString())
+          }
+        );
         const receipt = await transaction.wait();
         setTransactionPending(false);
         if (receipt.status) {
           toast.success(transactionSuccessText);
+          const _saledCount = await BattlePunkPresaleContract.saledCount()
+          setSaledCount(_saledCount.toNumber());
+          setCount(0);
         } else {
           toast.error(transactionFailText);
         }
@@ -123,7 +150,7 @@ const Mint = () => {
     }
   };
 
-  const getMintButtonEnabled = () => {
+  const getDepositButtonEnabled = () => {
     if (!active) {
       return false;
     }
@@ -133,40 +160,105 @@ const Mint = () => {
     if (count === 0) {
       return false;
     }
+    if (
+      step === 0 ||
+      (step === 1 && tier !== 2) ||
+      (step === 2 && tier === 0)
+    ) {
+      return false;
+    }
     return true;
   };
 
+  const getTierLevelText = () => {
+    if (tier === 0) {
+      return "YOU ARE NOT IN WHITELIST";
+    } else if (tier === 1) {
+      return "YOU ARE IN BASIC-WHITELIST";
+    } else {
+      return "YOU ARE IN PREMIUM-WHITELIST";
+    }
+  };
+
+  const getStepText = () => {
+    if (step === 0) {
+      return "SALE NOT ACTIVE";
+    } else if (step === 1) {
+      return "PREMIUM SALE";
+    } else if (step === 2) {
+      return "BASIC SALE";
+    } else {
+      return "OPEN SALE";
+    }
+  };
+
   const [price, setPrice] = useState("0");
-  const [totalSupply, setTotalSupply] = useState(0);
-  const [maxSupply, setMaxSupply] = useState(0);
   const [count, setCount] = useState(0);
-  const [maxCount, setMaxCount] = useState(0);
+  const [saledCount, setSaledCount] = useState(0);
+  const [saledCountLimit, setSaledCountLimit] = useState(0);
+  const [step, setStep] = useState(0);
+  const [tier, setTier] = useState(0);
+  const [tierMaxLimit, setTierMaxLimit] = useState(0);
+  const [myContribution, setMyContribution] = useState(0);
 
   const [transactionPending, setTransactionPending] = useState(false);
 
   useEffect(() => {
     const init = async () => {
+      setCount(0);
       if (active && !error) {
-        const BABPContract = new Contract(
-          BABPAddress,
-          BABPABI,
+        const BattlePunkPresaleContract = new Contract(
+          BattlePunkPresaleAddress,
+          BattlePunkPresaleABI,
           library.getSigner()
         );
-        const _price = await BABPContract.PRICE();
+        const _price = await BattlePunkPresaleContract.price();
         setPrice(parseFloat(formatEther(_price)).toPrecision(2));
 
-        const _maxCount = await BABPContract.MAX_BY_MINT();
-        setMaxCount(_maxCount.toNumber());
+        const _saledCountLimit = await BattlePunkPresaleContract.saledCountLimit();
+        setSaledCountLimit(_saledCountLimit.toNumber());
 
-        const _maxSupply = await BABPContract.MAX_SUPPLY();
-        setMaxSupply(_maxSupply.toNumber());
+        const _saledCount = await BattlePunkPresaleContract.saledCount();
+        setSaledCount(_saledCount.toNumber());
 
-        const _totalSupply = await BABPContract.totalSupply();
-        setTotalSupply(_totalSupply.toNumber());
+        const _step = await BattlePunkPresaleContract.step();
+        setStep(_step);
+
+        const _isPremiumUser = await BattlePunkPresaleContract.isPremiumUser(
+          getMerklePremiumProof(account)
+        );
+        const _isBasicUser = await BattlePunkPresaleContract.isBasicUser(
+          getMerkleBasicProof(account)
+        );
+
+        // merkleRoots for premium and basic
+        const _merklePremiumRoot = getMerklePremiumRoot();
+        const _merkleBasicRoot = getMerkleBasicRoot();
+        console.log("merklePremiumRoot", _merklePremiumRoot);
+        console.log("merkleBasicRoot", _merkleBasicRoot);
+
+        const _premiumMaxLimit = await BattlePunkPresaleContract.premiumMaxLimit();
+        const _basicMaxLimit = await BattlePunkPresaleContract.basicMaxLimit();
+        const _openMaxLimit = await BattlePunkPresaleContract.openMaxLimit();
+        if (_isPremiumUser) {
+          setTier(2);
+          setTierMaxLimit(_premiumMaxLimit);
+        } else if (_isBasicUser) {
+          setTier(1);
+          setTierMaxLimit(_basicMaxLimit);
+        } else {
+          setTier(0);
+          setTierMaxLimit(_openMaxLimit);
+        }
+
+        const _myContribution = await BattlePunkPresaleContract.contribution(
+          account
+        );
+        setMyContribution(_myContribution.toNumber());
       }
     };
     init();
-  }, [active, error, library]);
+  }, [active, error, library, account]);
 
   return (
     <div className="page-mint">
@@ -253,18 +345,18 @@ const Mint = () => {
         <div className="page-mint__desktop__container__footer-right">
           <div>NEXT SALE</div>
           <div>SOLD</div>
-          <div>0/8877</div>
+          <div>{saledCount}/8877</div>
           <div>PRICE</div>
-          <div>0.3ETH</div>
+          <div>{parseFloat(price)}ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-center-1">
-          SALE NOT ACTIVE
+          {active ? getStepText() : "---"}
         </div>
         <div className="page-mint__desktop__container__footer-center-2">
-          {active ? "CONNECT TO THE ETHEREUM" : "---"}
+          {active ? getTierLevelText() : "CONNECT TO THE ETHEREUM"}
         </div>
         <div className="page-mint__desktop__container__footer-center-3">
-          SOLD {totalSupply}/{maxSupply}
+          SOLD {saledCount} / {saledCountLimit}
         </div>
 
         <div className="page-mint__desktop__container__footer-center-4">
@@ -287,7 +379,7 @@ const Mint = () => {
         <div
           className="page-mint__desktop__container__footer-center-arrow-right"
           onClick={() => {
-            if (active && count < maxCount) {
+            if (active && count + myContribution < tierMaxLimit) {
               setCount(count + 1);
             }
           }}
@@ -295,9 +387,12 @@ const Mint = () => {
 
         <div
           className="page-mint__desktop__container__footer-center-6"
-          onClick={mint}
+          onClick={deposit}
+          style={{
+            cursor: getDepositButtonEnabled() ? "pointer" : "not-allowed",
+          }}
         >
-          {transactionPending ? "PENDING" : "MINT"}
+          {transactionPending ? "PENDING" : "DEPOSIT"}
         </div>
       </div>
 
@@ -335,10 +430,10 @@ const Mint = () => {
         </div>
         <div className="page-mint__mobile__container__gif__mask"></div>
         <div className="page-mint__mobile__container__premium-sale">
-          SALE NOT ACTIVE
+          {active ? getStepText() : "---"}
         </div>
         <div className="page-mint__mobile__container__connected-to-ethereum">
-          {active ? "CONNECT TO THE ETHEREUM" : "---"}
+          {active ? getTierLevelText() : "CONNECT TO THE ETHEREUM"}
         </div>
         <div className="page-mint__mobile__container__price">
           {active ? `${parseFloat(price) * count} ETH` : "--- ETH"}
@@ -355,14 +450,17 @@ const Mint = () => {
         <div
           className="page-mint__mobile__container__arrow-right"
           onClick={() => {
-            if (active && count < maxCount) {
+            if (active && count + myContribution < tierMaxLimit) {
               setCount(count + 1);
             }
           }}
         ></div>
 
         <div className="page-mint__mobile__container__count">{count}</div>
-        <div className="page-mint__mobile__container__mint-btn" onClick={mint}>
+        <div
+          className="page-mint__mobile__container__mint-btn"
+          onClick={deposit}
+        >
           {transactionPending ? "PENDING" : "MINT"}
         </div>
       </div>
