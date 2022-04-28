@@ -339,15 +339,11 @@ const Mint = () => {
           <div>PREVIOUS SALE</div>
           <div>SOLD</div>
           <div>1123/1123</div>
-          <div>PRICE</div>
-          <div>0.1ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-right">
           <div>NEXT SALE</div>
           <div>SOLD</div>
           <div>{saledCount}/8877</div>
-          <div>PRICE</div>
-          <div>{parseFloat(price)}ETH</div>
         </div>
         <div className="page-mint__desktop__container__footer-center-1">
           {active ? getStepText() : "---"}
