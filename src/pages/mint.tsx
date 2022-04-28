@@ -388,7 +388,7 @@ const Mint = () => {
             cursor: getDepositButtonEnabled() ? "pointer" : "not-allowed",
           }}
         >
-          {transactionPending ? "PENDING" : "DEPOSIT"}
+          {transactionPending ? "PENDING" : "BUY"}
         </div>
       </div>
 
@@ -457,7 +457,7 @@ const Mint = () => {
           className="page-mint__mobile__container__mint-btn"
           onClick={deposit}
         >
-          {transactionPending ? "PENDING" : "MINT"}
+          {transactionPending ? "PENDING" : "BUY"}
         </div>
       </div>
     </div>
