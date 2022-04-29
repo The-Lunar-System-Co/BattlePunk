@@ -32,7 +32,7 @@ import {
 } from "../merkletree";
 
 // variables
-const BattlePunkPresaleAddress = "0x4AEfF2921DE7ea2E404F23B1565AcF25f93f9525";
+const BattlePunkPresaleAddress = "0x82a5e5aB0359387C41368c72e9F0f0415a5F8543";
 const transactionSuccessText = "Transaction Success";
 const transactionFailText = "Transaction Fail";
 const transactionRejectText = "Transaction Reject";
@@ -139,6 +139,8 @@ const Mint = () => {
           toast.success(transactionSuccessText);
           const _saledCount = await BattlePunkPresaleContract.saledCount()
           setSaledCount(_saledCount.toNumber());
+          const _myContribution = await BattlePunkPresaleContract.contribution(account)
+          setMyContribution(_myContribution.toNumber())
           setCount(0);
         } else {
           toast.error(transactionFailText);
@@ -343,7 +345,7 @@ const Mint = () => {
         <div className="page-mint__desktop__container__footer-right">
           <div>NEXT SALE</div>
           <div>SOLD</div>
-          <div>{saledCount}/8877</div>
+          <div>{saledCount}/{saledCountLimit}</div>
         </div>
         <div className="page-mint__desktop__container__footer-center-1">
           {active ? getStepText() : "---"}
