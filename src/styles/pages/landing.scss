@@ -170,6 +170,9 @@
         justify-content: center;
         color: #3863a0;
         font-size: 20px;
+        a {
+          text-decoration: none;
+        }
       }
 
       &__social-icons {
@@ -546,6 +549,9 @@
       color: #3863a0;
       font-size: 24px;
       padding-top: 2%;
+      a{
+        text-decoration: none;
+      }
     }
 
     &__social-icons {

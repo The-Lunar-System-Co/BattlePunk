@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 
 // components
 import HyperLink from "../components/hyper-link";
@@ -43,7 +42,6 @@ import DiscordIcon from "../assets/images/icon-discord.png";
 import TwitterIcon from "../assets/images/icon-twitter.png";
 
 const Landing: React.FC = () => {
-  const history = useHistory();
 
   return (
     <>
@@ -101,11 +99,14 @@ const Landing: React.FC = () => {
             </div>
             <div
               className="page-landing__body__section-1__mint-btn"
-              onClick={() => {
-                history.push("/mint");
-              }}
             >
-              MINT NOW
+              <a
+                href="https://battlepunkarena.typeform.com/Whitelist"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WHITELIST
+              </a>
             </div>
             <div className="page-landing__body__section-1__social-icons">
               <a
@@ -261,11 +262,14 @@ const Landing: React.FC = () => {
           </div>
           <div
             className="page-landing-mobile__section-1__mint-btn"
-            onClick={() => {
-              history.push("/mint");
-            }}
           >
-            MINT NOW
+            <a
+              href="https://battlepunkarena.typeform.com/Whitelist"
+              target="_blank"
+              rel="noreferrer"
+            >
+              WHITELIST
+            </a>
           </div>
           <div className="page-landing-mobile__section-1__social-icons">
             <a

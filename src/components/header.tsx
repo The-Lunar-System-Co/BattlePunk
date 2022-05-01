@@ -9,7 +9,12 @@ const Header = () => {
     <div className="component-header">
       <div className="component-header__left">
         <DesktopNavItem to="/">Home</DesktopNavItem>
-        <DesktopNavItem to="/mint">Mint</DesktopNavItem>
+        <DesktopNavItem
+          to="https://battlepunkarena.typeform.com/Whitelist"
+          isHyperLink
+        >
+          Whitelist
+        </DesktopNavItem>
         <DesktopNavItem to="/" tooltip="Coming Soon">
           PunkyDex
         </DesktopNavItem>
@@ -53,10 +58,11 @@ const Header = () => {
           Home
         </MobileNavItem>
         <MobileNavItem
-          to="/mint"
+          to="https://battlepunkarena.typeform.com/Whitelist"
+          isHyperLink
           setIsMobileDropDownOpen={setIsMobileDropDownOpen}
         >
-          Mint
+          Whitelist
         </MobileNavItem>
         <MobileNavItem
           isComingSoon
