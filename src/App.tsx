@@ -8,6 +8,8 @@ import Header from "./components/header";
 import Landing from "./pages/landing";
 import Mint from "./pages/mint";
 import LSD from "./pages/lsd";
+import PunkyDex from "./pages/punkydex";
+import PunkyDexAdmin from "./pages/punkydex-admin";
 
 // 404 page
 import NotFound from "./pages/not-found";
@@ -27,6 +29,12 @@ const App = () => {
           </Route>
           <Route exact path="/lsd">
             <LSD />
+          </Route>
+          <Route exact path="/punkydex">
+            <PunkyDex />
+          </Route>
+          <Route exact path="/punkydex/admin">
+            <PunkyDexAdmin />
           </Route>
           <Route exact path="/not-found">
             <NotFound />

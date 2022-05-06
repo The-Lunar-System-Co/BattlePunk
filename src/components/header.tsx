@@ -15,7 +15,7 @@ const Header = () => {
         >
           Whitelist
         </DesktopNavItem>
-        <DesktopNavItem to="/" tooltip="Coming Soon">
+        <DesktopNavItem to="/punkydex">
           PunkyDex
         </DesktopNavItem>
         <DesktopNavItem to="/" tooltip="Under Construction">
@@ -65,8 +65,7 @@ const Header = () => {
           Whitelist
         </MobileNavItem>
         <MobileNavItem
-          isComingSoon
-          to="/"
+          to="/punkydex"
           setIsMobileDropDownOpen={setIsMobileDropDownOpen}
         >
           PunkyDex
