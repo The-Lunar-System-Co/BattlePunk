@@ -9,12 +9,14 @@
   border: 1px solid white;
   border-radius: 5px;
   box-shadow: rgb(4, 49, 55) 1px 1px 4px;
+  background-size: 100% 3px;
+  background-image: linear-gradient(#ffffffcc 1px, #81afd8cc 2px);
   cursor: pointer;
   transition: 0.3s;
 
   &:hover{
-    box-shadow: rgb(51, 15, 212) 0px 0px 16px;
-    border: 1px solid rgb(51, 15, 212);
+    box-shadow: rgb(224, 15, 32) 0px 0px 16px;
+    border: 1px solid rgb(224, 15, 32);
   }
 
   &__image {

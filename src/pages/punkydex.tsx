@@ -5,12 +5,12 @@ import "react-multi-carousel/lib/styles.css";
 import PunkyDexEnergy from "../components/punkydex-energy";
 import PunkyDexCard from "../components/punkydex-card";
 
-import EnergyIcon1 from "../assets/images/energy-icons/1.png";
-import EnergyIcon2 from "../assets/images/energy-icons/2.png";
-import EnergyIcon3 from "../assets/images/energy-icons/3.png";
-import EnergyIcon4 from "../assets/images/energy-icons/4.png";
-import EnergyIcon5 from "../assets/images/energy-icons/5.png";
-import EnergyIcon6 from "../assets/images/energy-icons/6.png";
+import EnergyIcon1 from "../assets/images/energy-icons/45.png";
+import EnergyIcon2 from "../assets/images/energy-icons/46.png";
+import EnergyIcon3 from "../assets/images/energy-icons/47.png";
+import EnergyIcon4 from "../assets/images/energy-icons/48.png";
+import EnergyIcon5 from "../assets/images/energy-icons/49.png";
+import EnergyIcon6 from "../assets/images/energy-icons/50.png";
 
 const PunkyDex = () => {
   const responsive = {
