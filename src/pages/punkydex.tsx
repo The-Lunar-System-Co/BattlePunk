@@ -12,6 +12,10 @@ import EnergyIcon4 from "../assets/images/energy-icons/48.png";
 import EnergyIcon5 from "../assets/images/energy-icons/49.png";
 import EnergyIcon6 from "../assets/images/energy-icons/50.png";
 
+import CardImage1 from '../assets/images/card-images/card-1.png'
+import CardImage2 from '../assets/images/card-images/card-2.png'
+import CardImage3 from '../assets/images/card-images/card-3.png'
+
 const PunkyDex = () => {
   const responsive = {
     superLargeDesktop: {
@@ -129,32 +133,32 @@ const PunkyDex = () => {
               shouldResetAutoplay={false}
             >
               <PunkyDexCard
-                image={EnergyIcon1}
+                image={CardImage1}
                 title="Card1"
                 description="Description"
               />
               <PunkyDexCard
-                image={EnergyIcon2}
+                image={CardImage2}
                 title="Card2"
                 description="Description"
               />
               <PunkyDexCard
-                image={EnergyIcon3}
+                image={CardImage3}
                 title="Card3"
                 description="Description"
               />
               <PunkyDexCard
-                image={EnergyIcon4}
+                image={CardImage1}
                 title="Card4"
                 description="Description"
               />
               <PunkyDexCard
-                image={EnergyIcon5}
+                image={CardImage2}
                 title="Card5"
                 description="Description"
               />
               <PunkyDexCard
-                image={EnergyIcon6}
+                image={CardImage3}
                 title="Card6"
                 description="Description"
               />
