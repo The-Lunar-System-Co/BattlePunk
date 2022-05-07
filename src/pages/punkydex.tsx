@@ -123,9 +123,10 @@ const PunkyDex = () => {
             <Carousel
               responsive={responsive}
               infinite={true}
-              // autoPlay={false}
+              autoPlay={false}
               // swipeable={false}
               removeArrowOnDeviceType={["tablet", "mobile"]}
+              shouldResetAutoplay={false}
             >
               <PunkyDexCard
                 image={EnergyIcon1}
