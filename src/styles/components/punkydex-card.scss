@@ -10,11 +10,12 @@
   border-radius: 5px;
   box-shadow: rgb(4, 49, 55) 1px 1px 4px;
   background-size: 100% 3px;
-  background-image: linear-gradient(#ffffffcc 1px, #297ac2cc 2px);
+  // background-image: linear-gradient(#ffffffcc 1px, #297ac2cc 2px);
+  background-color: #297ac233;
   cursor: pointer;
   transition: 0.3s;
 
-  &:hover{
+  &:hover {
     box-shadow: rgb(224, 15, 32) 0px 0px 16px;
     border: 1px solid rgb(224, 15, 32);
   }

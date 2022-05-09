@@ -26,7 +26,8 @@
     &__search {
       padding: 20px;
       background-size: 100% 3px;
-      background-image: linear-gradient(#ffffffcc 1px, #297ac2cc 2px);
+      // background-image: linear-gradient(#ffffffcc 1px, #297ac2cc 2px);
+      background-color: #297ac233;
       border-radius: 20px;
       border: 4px solid white;
       display: flex;
@@ -193,7 +194,8 @@
     &__cards {
       padding: 20px;
       background-size: 100% 3px;
-      background-image: linear-gradient(#ffffffcc 1px, #297ac2cc 2px);
+      // background-image: linear-gradient(#ffffffcc 1px, #297ac2cc 2px);
+      background-color: #297ac233;
       border-radius: 20px;
       border: 4px solid white;
       display: flex;
