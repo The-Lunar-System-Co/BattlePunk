@@ -8,7 +8,8 @@ import Header from "./components/header";
 import Landing from "./pages/landing";
 import Mint from "./pages/mint";
 import LSD from "./pages/lsd";
-import PunkyDex from "./pages/punkydex";
+import PunkyDexUser from "./pages/punkydex-user";
+import PunkyDexUserCard from "./pages/punkydex-user-card";
 import PunkyDexAdmin from "./pages/punkydex-admin";
 
 // 404 page
@@ -31,7 +32,10 @@ const App = () => {
             <LSD />
           </Route>
           <Route exact path="/punkydex">
-            <PunkyDex />
+            <PunkyDexUser />
+          </Route>
+          <Route exact path="/punkydex/card">
+            <PunkyDexUserCard />
           </Route>
           <Route exact path="/punkydex/admin">
             <PunkyDexAdmin />
