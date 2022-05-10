@@ -10,7 +10,6 @@ import Mint from "./pages/mint";
 import LSD from "./pages/lsd";
 import PunkyDexUser from "./pages/punkydex-user";
 import PunkyDexUserCard from "./pages/punkydex-user-card";
-import PunkyDexAdmin from "./pages/punkydex-admin";
 
 // 404 page
 import NotFound from "./pages/not-found";
@@ -36,9 +35,6 @@ const App = () => {
           </Route>
           <Route exact path="/punkydex/card">
             <PunkyDexUserCard />
-          </Route>
-          <Route exact path="/punkydex-admin">
-            <PunkyDexAdmin />
           </Route>
           <Route exact path="/not-found">
             <NotFound />

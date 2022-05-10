@@ -16,7 +16,7 @@ import CardImage1 from '../assets/images/card-images/card-1.png'
 import CardImage2 from '../assets/images/card-images/card-2.png'
 import CardImage3 from '../assets/images/card-images/card-3.png'
 
-const PunkyDexUser = () => {
+const PunkyDex = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -38,46 +38,46 @@ const PunkyDexUser = () => {
   };
 
   return (
-    <div className="page-punkydex-user">
-      <div className="page-punkydex-user__container">
-        <div className="page-punkydex-user__container__title">PunkyDex Database</div>
-        <div className="page-punkydex-user__container__search">
-          <div className="page-punkydex-user__container__search__title">Search</div>
-          <div className="page-punkydex-user__container__search__body">
-            <div className="page-punkydex-user__container__search__body__1">
-              <div className="page-punkydex-user__container__search__body__1__title">
+    <div className="page-punkydex">
+      <div className="page-punkydex__container">
+        <div className="page-punkydex__container__title">PunkyDex Database</div>
+        <div className="page-punkydex__container__search">
+          <div className="page-punkydex__container__search__title">Search</div>
+          <div className="page-punkydex__container__search__body">
+            <div className="page-punkydex__container__search__body__1">
+              <div className="page-punkydex__container__search__body__1__title">
                 Card Name and Keyword Search
               </div>
 
-              <div className="page-punkydex-user__container__search__body__1__body">
-                <div className="page-punkydex-user__container__search__body__1__body__item">
-                  <div className="page-punkydex-user__container__search__body__1__body__item__title">
+              <div className="page-punkydex__container__search__body__1__body">
+                <div className="page-punkydex__container__search__body__1__body__item">
+                  <div className="page-punkydex__container__search__body__1__body__item__title">
                     Card Name
                   </div>
-                  <input className="page-punkydex-user__container__search__body__1__body__item__input" />
+                  <input className="page-punkydex__container__search__body__1__body__item__input" />
                 </div>
 
-                <div className="page-punkydex-user__container__search__body__1__body__item">
-                  <div className="page-punkydex-user__container__search__body__1__body__item__title">
+                <div className="page-punkydex__container__search__body__1__body__item">
+                  <div className="page-punkydex__container__search__body__1__body__item__title">
                     Card Text
                   </div>
-                  <input className="page-punkydex-user__container__search__body__1__body__item__input" />
+                  <input className="page-punkydex__container__search__body__1__body__item__input" />
                 </div>
 
-                <div className="page-punkydex-user__container__search__body__1__body__item">
-                  <div className="page-punkydex-user__container__search__body__1__body__item__title">
+                <div className="page-punkydex__container__search__body__1__body__item">
+                  <div className="page-punkydex__container__search__body__1__body__item__title">
                     Evolves From
                   </div>
-                  <input className="page-punkydex-user__container__search__body__1__body__item__input" />
+                  <input className="page-punkydex__container__search__body__1__body__item__input" />
                 </div>
               </div>
             </div>
-            <div className="page-punkydex-user__container__search__body__2">
-              <div className="page-punkydex-user__container__search__body__2__title">
+            <div className="page-punkydex__container__search__body__2">
+              <div className="page-punkydex__container__search__body__2__title">
                 Energy Type
               </div>
 
-              <div className="page-punkydex-user__container__search__body__2__body">
+              <div className="page-punkydex__container__search__body__2__body">
                 <PunkyDexEnergy
                   icon={EnergyIcon1}
                   title="Energy Type 1"
@@ -112,18 +112,18 @@ const PunkyDexUser = () => {
             </div>
           </div>
 
-          <div className="page-punkydex-user__container__search__footer">
-            <div className="page-punkydex-user__container__search__footer__btn">
+          <div className="page-punkydex__container__search__footer">
+            <div className="page-punkydex__container__search__footer__btn">
               Reset
             </div>
-            <div className="page-punkydex-user__container__search__footer__btn">
+            <div className="page-punkydex__container__search__footer__btn">
               Search
             </div>
           </div>
         </div>
-        <div className="page-punkydex-user__container__cards">
-          <div className="page-punkydex-user__container__cards__title">Cards</div>
-          <div className="page-punkydex-user__container__cards__carousel">
+        <div className="page-punkydex__container__cards">
+          <div className="page-punkydex__container__cards__title">Cards</div>
+          <div className="page-punkydex__container__cards__carousel">
             <Carousel
               responsive={responsive}
               infinite={true}
@@ -170,4 +170,4 @@ const PunkyDexUser = () => {
   );
 };
 
-export default PunkyDexUser;
+export default PunkyDex;
