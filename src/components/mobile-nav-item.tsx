@@ -36,7 +36,9 @@ const MobileNavItem: React.FC<IMobileNavItem> = ({
         <div
           className="component-mobile-nav-item"
           onClick={() => {
-            history.push(to);
+            if (!isComingSoon) {
+              history.push(to);
+            }
             setIsMobileDropDownOpen(false);
           }}
         >

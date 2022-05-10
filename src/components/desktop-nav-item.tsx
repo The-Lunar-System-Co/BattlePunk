@@ -30,7 +30,9 @@ const DesktopNavItem: React.FC<IDesktopNavItem> = ({
         <div
           className="component-desktop-nav-item"
           onClick={() => {
-            history.push(to);
+            if (!tooltip) {
+              history.push(to);
+            }
           }}
         >
           {children}

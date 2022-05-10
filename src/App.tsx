@@ -37,7 +37,7 @@ const App = () => {
           <Route exact path="/punkydex/card">
             <PunkyDexUserCard />
           </Route>
-          <Route exact path="/punkydex/admin">
+          <Route exact path="/punkydex-admin">
             <PunkyDexAdmin />
           </Route>
           <Route exact path="/not-found">
