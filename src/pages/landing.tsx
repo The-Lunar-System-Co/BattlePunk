@@ -294,7 +294,7 @@ const Landing: React.FC = () => {
               <img src={TwitterIcon} alt="twitter" />
             </a>
             <a
-              href="https://raritysniper.com/nft-drops-calendar"
+              href="https://nftcalendar.io/event/battlepunk-arena/"
               target="_blank"
               rel="noreferrer"
             >
