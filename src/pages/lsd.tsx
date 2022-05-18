@@ -23,7 +23,7 @@ const LSD = () => {
             <img src={PanelImage} alt="page-lsd-header-panel" />
             <div className="page-lsd__header__panel__container">
               <div className="page-lsd__header__panel__container__text">
-                The ERC-20 token at the heart of the Lunar Ecosystem.
+                The SOL token at the heart of the Lunar Ecosystem.
               </div>
               <a
                 className="page-lsd__header__panel__container__link-1"
