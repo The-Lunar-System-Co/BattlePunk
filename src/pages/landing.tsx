@@ -216,7 +216,7 @@ const Landing: React.FC = () => {
               className="footer__social-icons__social-3"
             />
             <HyperLink
-              href="https://raritysniper.com/nft-drops-calendar"
+              href="https://nftcalendar.io/event/battlepunk-arena/"
               className="footer__social-icons__social-4"
             />
           </div>
@@ -294,7 +294,7 @@ const Landing: React.FC = () => {
               <img src={TwitterIcon} alt="twitter" />
             </a>
             <a
-              href="https://raritysniper.com/nft-drops-calendar"
+              href="https://nftcalendar.io/event/battlepunk-arena/"
               target="_blank"
               rel="noreferrer"
             >
