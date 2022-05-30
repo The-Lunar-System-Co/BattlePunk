@@ -42,7 +42,6 @@ import DiscordIcon from "../assets/images/icon-discord.png";
 import TwitterIcon from "../assets/images/icon-twitter.png";
 
 const Landing: React.FC = () => {
-
   return (
     <>
       <div className="page-landing">
@@ -97,15 +96,13 @@ const Landing: React.FC = () => {
               well as exclusive access to drops, events, and other benefits
               within the battlepunk arena ecosystem.
             </div>
-            <div
-              className="page-landing__body__section-1__mint-btn"
-            >
+            <div className="page-landing__body__section-1__mint-btn">
               <a
-                href="https://battlepunkarena.typeform.com/Whitelist"
+                href="https://foundersmint.battlepunkarena.com/"
                 target="_blank"
                 rel="noreferrer"
               >
-                WHITELIST
+                MINT
               </a>
             </div>
             <div className="page-landing__body__section-1__social-icons">
@@ -260,15 +257,13 @@ const Landing: React.FC = () => {
             as exclusive access to drops, events, and other benefits within the
             battlepunk arena ecosystem.
           </div>
-          <div
-            className="page-landing-mobile__section-1__mint-btn"
-          >
+          <div className="page-landing-mobile__section-1__mint-btn">
             <a
-              href="https://battlepunkarena.typeform.com/Whitelist"
+              href="https://foundersmint.battlepunkarena.com/"
               target="_blank"
               rel="noreferrer"
             >
-              WHITELIST
+              MINT
             </a>
           </div>
           <div className="page-landing-mobile__section-1__social-icons">
