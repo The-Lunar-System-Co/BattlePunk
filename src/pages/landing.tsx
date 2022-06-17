@@ -36,8 +36,6 @@ import PlayIcon from "../assets/images/mobile-home/play.png";
 
 // social-icons
 import TelegramIcon from "../assets/images/icon-telegram.png";
-import OpenseaIcon from "../assets/images/icon-opensea.png";
-import InstagramIcon from "../assets/images/icon-instagram.png";
 import DiscordIcon from "../assets/images/icon-discord.png";
 import TwitterIcon from "../assets/images/icon-twitter.png";
 
@@ -114,13 +112,6 @@ const Landing: React.FC = () => {
                 <img src={DiscordIcon} alt="discord" />
               </a>
               <a
-                href="https://www.instagram.com/battlepunkarena"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={InstagramIcon} alt="instagram" />
-              </a>
-              <a
                 href="https://twitter.com/BattlepunkTCG"
                 target="_blank"
                 rel="noreferrer"
@@ -133,7 +124,7 @@ const Landing: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={OpenseaIcon} alt="opensea" />
+                <img src={TelegramIcon} alt="opensea" />
               </a>
             </div>
           </div>
@@ -205,10 +196,6 @@ const Landing: React.FC = () => {
               className="footer__social-icons__social-1"
             />
             <HyperLink
-              href="https://www.instagram.com/battlepunkarena"
-              className="footer__social-icons__social-2"
-            />
-            <HyperLink
               href="https://twitter.com/BattlepunkTCG"
               className="footer__social-icons__social-3"
             />
@@ -273,13 +260,6 @@ const Landing: React.FC = () => {
               rel="noreferrer"
             >
               <img src={DiscordIcon} alt="discord" />
-            </a>
-            <a
-              href="https://www.instagram.com/battlepunkarena"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={InstagramIcon} alt="instagram" />
             </a>
             <a
               href="https://twitter.com/BattlepunkTCG"

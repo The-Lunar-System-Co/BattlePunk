@@ -31,7 +31,7 @@ const Header = () => {
       <div className="component-header__right">
         <DesktopNavItem to="/lsd">$LSD</DesktopNavItem>
         <DesktopNavItem to="/" tooltip="Coming Very Soon">
-          Punkon
+          Team
         </DesktopNavItem>
         <DesktopNavItem
           to="https://s3.eu-central-1.amazonaws.com/lunarsystem.co/Battlepaper.pdf"
@@ -96,7 +96,7 @@ const Header = () => {
           to="/"
           setIsMobileDropDownOpen={setIsMobileDropDownOpen}
         >
-          Punkon
+          Team
         </MobileNavItem>
         <MobileNavItem
           to="https://s3.eu-central-1.amazonaws.com/lunarsystem.co/Battlepaper.pdf"
