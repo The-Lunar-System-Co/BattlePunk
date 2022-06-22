@@ -29,7 +29,9 @@ const Header = () => {
         </DesktopNavItem>
       </div>
       <div className="component-header__right">
-        <DesktopNavItem to="/lsd">$LSD</DesktopNavItem>
+        <DesktopNavItem to="https://www.lunarsystem.co/" isHyperLink>
+          $LSD
+        </DesktopNavItem>
         <DesktopNavItem to="/" tooltip="Coming Very Soon">
           Team
         </DesktopNavItem>
@@ -86,7 +88,8 @@ const Header = () => {
           Play
         </MobileNavItem>
         <MobileNavItem
-          to="/lsd"
+          to="https://www.lunarsystem.co/"
+          isHyperLink
           setIsMobileDropDownOpen={setIsMobileDropDownOpen}
         >
           $LSD

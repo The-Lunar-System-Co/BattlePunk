@@ -7,7 +7,6 @@ import Header from "./components/header";
 // main pages
 import Landing from "./pages/landing";
 import Mint from "./pages/mint";
-import LSD from "./pages/lsd";
 import PunkyDexUser from "./pages/punkydex-user";
 import PunkyDexUserCard from "./pages/punkydex-user-card";
 
@@ -26,9 +25,6 @@ const App = () => {
           </Route>
           <Route exact path="/mint">
             <Mint />
-          </Route>
-          <Route exact path="/lsd">
-            <LSD />
           </Route>
           <Route exact path="/punkydex">
             <PunkyDexUser />
