@@ -119,7 +119,7 @@ const Landing: React.FC = () => {
                 <img src={TwitterIcon} alt="twitter" />
               </a>
               <a
-                href="https://opensea.io"
+                href="https://t.me/TheLunarSystem"
                 // href="#"
                 target="_blank"
                 rel="noreferrer"
@@ -269,7 +269,7 @@ const Landing: React.FC = () => {
               <img src={TwitterIcon} alt="twitter" />
             </a>
             <a
-              href="https://nftcalendar.io/event/battlepunk-arena/"
+              href="https://t.me/TheLunarSystem"
               target="_blank"
               rel="noreferrer"
             >
