@@ -88,7 +88,7 @@ const Header = () => {
           Play
         </MobileNavItem>
         <MobileNavItem
-          to="https://www.lunarsystem.co/"
+          to="https://lunar-system-website-eight.vercel.app/"
           isHyperLink
           setIsMobileDropDownOpen={setIsMobileDropDownOpen}
         >
