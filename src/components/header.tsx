@@ -29,7 +29,7 @@ const Header = () => {
         </DesktopNavItem>
       </div>
       <div className="component-header__right">
-        <DesktopNavItem to="https://lunar-system-website-eight.vercel.app/" isHyperLink>
+        <DesktopNavItem to="https://lunarsystemdollar.com/" isHyperLink>
           $LSD
         </DesktopNavItem>
         <DesktopNavItem to="/" tooltip="Coming Very Soon">
@@ -88,7 +88,7 @@ const Header = () => {
           Play
         </MobileNavItem>
         <MobileNavItem
-          to="https://lunar-system-website-eight.vercel.app/"
+          to="https://lunarsystemdollar.com/"
           isHyperLink
           setIsMobileDropDownOpen={setIsMobileDropDownOpen}
         >
