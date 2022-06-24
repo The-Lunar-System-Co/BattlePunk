@@ -200,7 +200,7 @@ const Landing: React.FC = () => {
               className="footer__social-icons__social-3"
             />
             <HyperLink
-              href="https://nftcalendar.io/event/battlepunk-arena/"
+              href="https://t.me/TheLunarSystem"
               className="footer__social-icons__social-4"
             />
           </div>
