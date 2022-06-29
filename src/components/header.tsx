@@ -22,17 +22,17 @@ const Header = () => {
           ArenaMarket
         </DesktopNavItem>
         <DesktopNavItem
-          to="/"
-          tooltip="Coming Soon: See Battle Paper For Planeed Release Date"
+          to="https://battlepunkarena.typeform.com/betasignup"
+          isHyperLink
         >
-          Play
+          BETA
         </DesktopNavItem>
       </div>
       <div className="component-header__right">
         <DesktopNavItem to="https://lunarsystemdollar.com/" isHyperLink>
           $LSD
         </DesktopNavItem>
-        <DesktopNavItem to="/" tooltip="Coming Very Soon">
+        <DesktopNavItem to="https://www.lunarsystem.co/team" isHyperLink>
           Team
         </DesktopNavItem>
         <DesktopNavItem
@@ -46,7 +46,7 @@ const Header = () => {
         </DesktopNavItem>
         <DesktopNavItem
           to="/"
-          tooltip="Coming Soon: Email us at info@lunarsystem.co about partnership inquires"
+          tooltip="Email us at info@lunarsystem.co about partnership inquires"
         >
           Partners
         </DesktopNavItem>
