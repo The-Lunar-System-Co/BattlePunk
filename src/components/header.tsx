@@ -71,7 +71,7 @@ const Header = () => {
           to="/punkydex"
           setIsMobileDropDownOpen={setIsMobileDropDownOpen}
         >
-          PunkyDex
+          Punkydex
         </MobileNavItem>
         <MobileNavItem
           isComingSoon
