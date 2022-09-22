@@ -84,15 +84,15 @@ const Landing: React.FC = () => {
               />
             </div>
             <div className="page-landing__body__section-1__title">
-              JOIN THE BATTLE
+              BATTLE TO EARN
             </div>
             <div className="page-landing__body__section-1__text">
-              the battlepunks are a collection of 10,000 galactic hero nfts at
-              the heart of the battlepunk arena trading card game.
+              Battlepunk Arena is a digital strategy game that changes the way we play and earn.
+
               <br />
-              <br /> get your battlepunk to gain early access to the game, as
-              well as exclusive access to drops, events, and other benefits
-              within the battlepunk arena ecosystem.
+              <br /> 
+Players face each other in one on one matches where they can wager crypto in winner-takes-all battles.
+Build up your powerful team of cute & creepy Punkies and do battle against opponents from all over the world..
             </div>
             <div className="page-landing__body__section-1__mint-btn">
               <a
