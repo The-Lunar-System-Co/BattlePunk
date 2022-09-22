@@ -96,11 +96,11 @@ Build up your powerful team of cute & creepy Punkies and do battle against oppon
             </div>
             <div className="page-landing__body__section-1__mint-btn">
               <a
-                href="https://foundersmint.battlepunkarena.com/"
+                href="https://battlepunkarena.typeform.com/betasignup"
                 target="_blank"
                 rel="noreferrer"
               >
-                MINT
+                BETA
               </a>
             </div>
             <div className="page-landing__body__section-1__social-icons">
