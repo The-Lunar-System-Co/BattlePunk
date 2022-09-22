@@ -10,7 +10,7 @@ const Header = () => {
       <div className="component-header__left">
         <DesktopNavItem to="/">Home</DesktopNavItem>
         <DesktopNavItem
-          to="https://foundersmint.battlepunkarena.com/"
+          to="https://battlepunkarena.typeform.com/betasignup"
           isHyperLink
         >
           Mint
